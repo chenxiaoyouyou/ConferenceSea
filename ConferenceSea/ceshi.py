@@ -51,3 +51,15 @@ print speakers
 speaker = html.xpath('//h5/a/text()')
 print speaker
 
+speaker_html = open('./speaker.html')
+speaker_html = speaker_html.read()
+speaker_html = etree.HTML(speaker_html)
+name = speaker_html.xpath('//h1/text()')[0]
+print name.strip()
+position = speaker_html.xpath('//h1/../text()')
+print position[1].strip()
+speaker_specialities = speaker_html.xpath('//h2[@id="moreSpecilty"]/following-sibling::div[1]/text()')[0].strip()
+print speaker_specialities
+speaker_interested = speaker_html.xpath('//h2[@id="moreTopics"]/following-sibling::div[1]/text()')[0].strip()
+print speaker_interested
+

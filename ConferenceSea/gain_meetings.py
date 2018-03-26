@@ -20,6 +20,12 @@ class GainDetailInfoThread(threading.Thread):
                         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36',
                         'Connection': 'keep-alive',
                         }
+        # 创建一个redis链接
+        self.redis_cli = redis.StrictRedis(host='localhost', port=6379, db=7)
+        # 创建一个mysql链接
+        self.mysql_cli = pymysql.connect(host='localhost', port=3306, database='conference', user='root', password='mysql', charset='utf8')
+
+
     def run(self):
         print '开始爬取'
         self.gain_info()
@@ -32,8 +38,12 @@ class GainDetailInfoThread(threading.Thread):
         """
         # 无限循环从redis中获取数据
         while True:
-            redis_cli = redis.StrictRedis(host='localhost', port=6379, db=7)
-            url = redis_cli.spop('2017_urls')
+            try:
+
+                url = self.redis_cli.spop('2017_urls')
+            except Exception as e:
+                logger.error(e)
+                logger.error('从redis中取数据出错')
             if not url:
                 break
             # 多次尝试打开一个网页,打开就直接跳出,打开失败尝试再次打开
@@ -49,6 +59,7 @@ class GainDetailInfoThread(threading.Thread):
                     break
                 except Exception as e:
                     logger.error(e)
+                    logger.error('打开网页失败')
 
             if html_selector:
                 # 存在网页数据, 从中取出需要的数据
@@ -97,15 +108,51 @@ class GainDetailInfoThread(threading.Thread):
                 # 最终学科字符串
                 specialities = specialities.strip(',')
                 # 获取发言人信息
-                speakers_list = html_selector.xpath('//h5/a/text()')
+                # speakers_list = html_selector.xpath('//h5/a/text()')
                 speakers_url_list = html_selector.xpath('//div[@id="speaker_confView"]/div/div/div/a/@href')
+                # 将会议的信息加入mysql数据库
+                try:
+                    paras1 = [title, current_url, start_date, end_date, area, organizer, specialities]
+                    # 游标
+                    cursor = self.mysql_cli.cursor()
+                    cursor.execute('insert into conference(title, url, start_date, end_date, area, organized, specialties) VALUES (%s, %s, %s, %s, %s, %s, %s)', paras1)
+                    self.mysql_cli.commit()
+                    paras2 = [current_url,]
+                    cursor.execute('select id from conference where url = %s', paras2)
+                    # 获取该条数据在数据库中的id, fetchone结果为元祖
+                    conference_id = cursor.fetchone()[0]
+
+                except Exception as e:
+                    # 发生错误,数据库回滚
+                    self.mysql_cli.rollback()
+                    logger.error(e)
+                    logger.error('插入数据错误')
+                    # 会议信息加入数据库失败的话,就不在查找发言人信息,直接进行下一次循环
+                    continue
+
                 for url in speakers_url_list:
                     # 依次打开发言人url, 并从中获取信息
                     try:
                         speaker_data = requests.get(url, headers=self.headers)
-                        # 得到作者页的信息
+                        # 得到发言人页的信息
                         speaker_data = etree.HTML(speaker_data)
-                        name = speaker_data.xpath()
+                        # 获取发言人姓名
+                        name = speaker_data.xpath('//h1/text()')[0]
+                        name = name.strip()
+                        # 职位信息
+                        position = (speaker_data.xpath('//h1/../text()')[1].strip())
+                        # 发言主题
+                        speaker_specialities = speaker_data.xpath('//h2[@id="moreSpecilty"]/following-sibling::div[1]/text()')[0].strip()
+                        # 兴趣主题
+                        speaker_interested = speaker_data.xpath('//h2[@id="moreTopics"]/following-sibling::div[1]/text()')[0].strip()
+                        # 如果作者没有填写相关信息,则设置为none
+                        if speaker_specialities == 'This section has yet to be updated by the speaker':
+                            speaker_specialities = None
+                        if speaker_interested == 'This section has yet to be updated by the speaker':
+                            speaker_interested = None
+                    except Exception as e:
+                        logger.error(e)
+
 
 
 
