@@ -48,5 +48,6 @@ for spe in specialties_list:
 print specialities.strip(',')
 speakers =  html.xpath('//div[@id="speaker_confView"]/div/div/div/a/@href')
 print speakers
-
+speaker = html.xpath('//h5/a/text()')
+print speaker
 

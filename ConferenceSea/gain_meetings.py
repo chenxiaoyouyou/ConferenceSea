@@ -97,7 +97,15 @@ class GainDetailInfoThread(threading.Thread):
                 # 最终学科字符串
                 specialities = specialities.strip(',')
                 # 获取发言人信息
-                speakers_list = html_selector.xpath('//div[@id="speaker_confView"]/div/div/div/a/@href')
+                speakers_list = html_selector.xpath('//h5/a/text()')
+                speakers_url_list = html_selector.xpath('//div[@id="speaker_confView"]/div/div/div/a/@href')
+                for url in speakers_url_list:
+                    # 依次打开发言人url, 并从中获取信息
+                    try:
+                        speaker_data = requests.get(url, headers=self.headers)
+                        # 得到作者页的信息
+                        speaker_data = etree.HTML(speaker_data)
+                        name = speaker_data.xpath()
 
 
 
