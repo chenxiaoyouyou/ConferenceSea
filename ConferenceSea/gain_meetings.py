@@ -57,7 +57,7 @@ class GainDetailInfoThread(threading.Thread):
                 # 会议标题
                 title = html_selector.xpath('//h1/text()')[0]
                 # 获取会议的开始日期和结束日期
-                date_str = html_selector.xpath('//div[@class="date"]/text()')
+                date_str = html_selector.xpath('//div[@class="date"]/text()')[0]
                 # 获取日期字符串
                 date_str = date_str.replace(',', ' ').replace('|', ' ').replace('\t', '').strip()
                 date_str = re.match(r'([^ ]+).*?([\d]{1,2}).*?([\d]{1,2}).*?([\d]{4})', date_str)
@@ -83,7 +83,22 @@ class GainDetailInfoThread(threading.Thread):
                 # 开始日期和结束日期,格式为'1990-03-20'
                 start_date = year + '-' + Month.get(month) + '-' + start_day
                 end_date = year + '-' + Month.get(month) + '-' + end_day
-                
+                # 获取会议举行的地区,(列表)
+                area = html_selector.xpath('//div[@class="date"]/a/text()')
+                # 地区
+                area = area[0] + ',' + area[1]
+                # 组织机构
+                organizer = html_selector.xpath('//div[@class="speakers marT10"]/span/a/text()')[0]
+                # 学科, 可能有多个学科
+                specialties_list = html_selector.xpath('//div[@class="speakers"]/span/a/text()')
+                specialities = ''
+                for spe in specialties_list:
+                    specialities += (spe + ',')
+                # 最终学科字符串
+                specialities = specialities.strip(',')
+                # 获取发言人信息
+                speakers_list = html_selector.xpath('//div[@id="speaker_confView"]/div/div/div/a/@href')
+
 
 
 

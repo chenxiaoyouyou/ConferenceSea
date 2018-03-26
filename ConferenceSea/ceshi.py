@@ -38,5 +38,15 @@ print area[1]
 area = area[0] + ',' + area[1]
 print area
 
+print '*'*30
+organizer = html.xpath('//div[@class="speakers marT10"]/span/a/text()')
+print organizer[0]
+specialties_list = html.xpath('//div[@class="speakers"]/span/a/text()')
+specialities = ''
+for spe in specialties_list:
+    specialities += (spe + ',')
+print specialities.strip(',')
+speakers =  html.xpath('//div[@id="speaker_confView"]/div/div/div/a/@href')
+print speakers
 
 
