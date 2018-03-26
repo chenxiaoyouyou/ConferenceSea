@@ -7,6 +7,9 @@ from config import logger
 import redis
 from multiprocessing import Pool
 from Queue import Queue
+import requests
+from lxml import etree
+import random
 
 
 
@@ -29,20 +32,22 @@ class Spider1:
         # 拼接会议列表页的url字符串
         self.url = '%s%s&%s&%s&search-time=customdate%s' % (url_start, keywords, begin, end, url_end)
         # logger.
-
+        print self.url
         # 设置不加载图片
         chrome_opt = webdriver.ChromeOptions()
         prefs = {"profile.managed_default_content_settings.images": 2}
         chrome_opt.add_experimental_option('prefs', prefs)
         # 设置请求referer为该网站的首页
-        chrome_opt.add_argument('Referer=https://www.emedevents.com/')
-
+        # chrome_opt.add_argument('Referer=https://www.emedevents.com/')
+        proxy = '--proxy-server=http://%s' % self.get_proxy()
+        print proxy
+        # 设置代理
+        chrome_opt.add_argument(proxy)
         # 构建浏览器对象
         self.driver = webdriver.Chrome(chrome_options=chrome_opt)
         # redis链接
         redis_cli = redis.StrictRedis(host='localhost', port=6379, db=7)
         # 添加请求头
-
         # 为每个线程创建redis链接, 多个线程操作一个redis链接会发生错误
         self.redis_cli = redis_cli
         logger.info(self.url)
@@ -55,6 +60,7 @@ class Spider1:
             try:
                 timeout -= 1
                 self.driver.get(self.url)
+                # print self.driver.
                 break
             except Exception as e:
                 logger.error(e)
@@ -98,6 +104,24 @@ class Spider1:
         logger.info('Done'+ self.url)
         self.driver.quit()
         print '结束运行'
+
+    # 获取代理
+    def get_proxy(self):
+        """从块代理首页获取代理并从中加入列表"""
+        # 快代理
+        pro_list = []
+        url = 'https://www.kuaidaili.com/free/'
+        content = requests.get(url)
+        selector = etree.HTML(content.text)
+        ip = selector.xpath('//tr/td[1]/text()')
+        port = selector.xpath('//tr/td[2]/text()')
+        for i in range(len(ip)):
+            pro_list.append(ip[i] + ':' + port[i])
+        # time.sleep(300)
+        # 随机返回一个可用的ip和端口
+        return random.choice(pro_list)
+
+
 
 
 def create_pro(line):

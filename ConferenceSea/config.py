@@ -6,7 +6,7 @@ from logging.handlers import RotatingFileHandler
 # 创建日志对象
 logger = logging.getLogger()
 # 设定等级
-logger.setLevel(level=logging.WARNING)
+logger.setLevel(level=logging.DEBUG)
 # 添加handler
 file_handler = RotatingFileHandler('logs/log', maxBytes=1024*1024*100, backupCount=5)
 # 设定日志格式

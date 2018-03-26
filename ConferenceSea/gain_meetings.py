@@ -76,7 +76,7 @@ class GainDetailInfoThread(threading.Thread):
                 start_day = date_str.group(2)
                 end_day = date_str.group(3)
                 year = date_str.group(4)
-                # 月份字典,用于将英文月份转化为数字
+                # 月份字典,用于将英文月份转化为数字字符串
                 Month = {
                     'Jan': '01',
                     'Feb': '02',
@@ -115,6 +115,7 @@ class GainDetailInfoThread(threading.Thread):
                     paras1 = [title, current_url, start_date, end_date, area, organizer, specialities]
                     # 游标
                     cursor = self.mysql_cli.cursor()
+                    # 准备加一个锁
                     cursor.execute('insert into conference(title, url, start_date, end_date, area, organized, specialties) VALUES (%s, %s, %s, %s, %s, %s, %s)', paras1)
                     self.mysql_cli.commit()
                     paras2 = [current_url,]
