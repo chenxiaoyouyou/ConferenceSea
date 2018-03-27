@@ -4,7 +4,7 @@ import requests
 from lxml import etree
 import pymysql
 import threading
-from config import logger
+from config import logger, get_proxy
 import re
 
 class GainDetailInfoThread(threading.Thread):
@@ -15,7 +15,6 @@ class GainDetailInfoThread(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
         self.headers = {'Accept': '*/*',
-                        'Accept-Language': 'en-US,en;q=0.8',
                         'Cache-Control': 'max-age=0',
                         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36',
                         'Connection': 'keep-alive',
@@ -24,7 +23,6 @@ class GainDetailInfoThread(threading.Thread):
         self.redis_cli = redis.StrictRedis(host='localhost', port=6379, db=7)
         # 创建一个mysql链接
         self.mysql_cli = pymysql.connect(host='localhost', port=3306, database='conference', user='root', password='mysql', charset='utf8')
-
 
     def run(self):
         print '开始爬取'
@@ -52,8 +50,14 @@ class GainDetailInfoThread(threading.Thread):
             while times > 0:
                 times -= 1
                 try:
+                    """
+                    proxies = { "http": "http://10.10.1.10:3128", "https": "http://10.10.1.10:1080", }
+                    requests.get("http://example.org", proxies=proxies)
+                    """
+
+                    proxies = {"http":"http://" + get_proxy()}
                     # 请求url
-                    content = requests.get(url, headers=self.headers)
+                    content = requests.get(url, headers=self.headers, proxies=proxies)
                     # 获取数据
                     html_selector = etree.HTML(content.text)
                     break
@@ -112,11 +116,11 @@ class GainDetailInfoThread(threading.Thread):
                 speakers_url_list = html_selector.xpath('//div[@id="speaker_confView"]/div/div/div/a/@href')
                 # 将会议的信息加入mysql数据库
                 try:
-                    paras1 = [title, current_url, start_date, end_date, area, organizer, specialities]
+                    meeting_info = [title, current_url, start_date, end_date, area, organizer, specialities]
                     # 游标
                     cursor = self.mysql_cli.cursor()
                     # 准备加一个锁
-                    cursor.execute('insert into conference(title, url, start_date, end_date, area, organized, specialties) VALUES (%s, %s, %s, %s, %s, %s, %s)', paras1)
+                    cursor.execute('insert into conference(title, url, start_date, end_date, area, organized, specialties) VALUES (%s, %s, %s, %s, %s, %s, %s)', meeting_info)
                     self.mysql_cli.commit()
                     paras2 = [current_url,]
                     cursor.execute('select id from conference where url = %s', paras2)
@@ -130,11 +134,15 @@ class GainDetailInfoThread(threading.Thread):
                     logger.error('插入数据错误')
                     # 会议信息加入数据库失败的话,就不在查找发言人信息,直接进行下一次循环
                     continue
+                finally:
+                    cursor.close()
+
 
                 for url in speakers_url_list:
                     # 依次打开发言人url, 并从中获取信息
                     try:
-                        speaker_data = requests.get(url, headers=self.headers)
+                        proxies = {"http": "http://" + get_proxy()}
+                        speaker_data = requests.get(url, headers=self.headers, proxies=proxies)
                         # 得到发言人页的信息
                         speaker_data = etree.HTML(speaker_data)
                         # 获取发言人姓名
@@ -153,10 +161,43 @@ class GainDetailInfoThread(threading.Thread):
                             speaker_interested = None
                     except Exception as e:
                         logger.error(e)
+                        logger.error('查找发言人信息失败')
+                        position = None
+                        speaker_specialities = None
+                        speaker_interested = None
 
+                    # 将查询到的发言人信息写进数据库(url和名字是必须信息,如果没有的话,不写入数据库)
+                    if all([url, name]):
+                        try:
+                            speaker_info = [url, name, position, speaker_specialities, speaker_interested]
+                            cursor = self.mysql_cli.cursor()
+                            cursor.execute('insert into speakers(url, name, position, specialties, interested) VALUES (%s, %s, %s, %s, %s)' , speaker_info)
+                            url = [url, ]
+                            speaker_id = cursor.execute('select id from speakers where url = %s', url)
+                            # 提交插入信息
+                            self.mysql_cli.commit()
+                        except Exception as e:
+                            self.mysql_cli.rollback()
+                            logger.error(e)
+                            logger.error('发言人信息插入失败')
+                            # 失败的话可以直接进行下一次循环
+                            continue
+                        finally:
+                            cursor.close()
 
-
-
-
-
-
+                    # 将会议信息和发言人信息加入关系表
+                    if all([conference_id, speaker_id]):
+                        try:
+                            cursor = self.mysql_cli.cursor()
+                            # 将二者关系插入关系表
+                            cursor.execute('insert into conference_speakers(conference_id, speakers_id) VALUES (%s, %s)', [conference_id, speaker_id])
+                            cursor.commit()
+                        except Exception as e:
+                            self.mysql_cli.rollback()
+                            logger.error(e)
+                            logger.error('关系插入失败')
+                        finally:
+                            # 关闭游标
+                            cursor.close()
+        # 无线循环跳出以后,没有后续梳理任务后,关闭数据库链接
+        self.mysql_cli.close()

@@ -1,9 +1,18 @@
-i = 0
-while i<10:
-    print i
+#coding=utf-8
+i = 1
+while i < 10:
     i += 1
     try:
+        print i
         d
     except:
+        print '错误'
         continue
-    print i + 100
+    finally:
+        print 'finally'
+
+    print 'hello'
+
+
+
+

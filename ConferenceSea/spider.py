@@ -3,14 +3,10 @@ from selenium.webdriver import ActionChains
 from selenium import webdriver
 import time
 import urllib
-from config import logger
+from config import logger, get_proxy
 import redis
 from multiprocessing import Pool
 from Queue import Queue
-import requests
-from lxml import etree
-import random
-
 
 
 class Spider1:
@@ -39,7 +35,7 @@ class Spider1:
         chrome_opt.add_experimental_option('prefs', prefs)
         # 设置请求referer为该网站的首页
         # chrome_opt.add_argument('Referer=https://www.emedevents.com/')
-        proxy = '--proxy-server=http://%s' % self.get_proxy()
+        proxy = '--proxy-server=http://%s' % get_proxy()
         print proxy
         # 设置代理
         chrome_opt.add_argument(proxy)
@@ -104,24 +100,6 @@ class Spider1:
         logger.info('Done'+ self.url)
         self.driver.quit()
         print '结束运行'
-
-    # 获取代理
-    def get_proxy(self):
-        """从块代理首页获取代理并从中加入列表"""
-        # 快代理
-        pro_list = []
-        url = 'https://www.kuaidaili.com/free/'
-        content = requests.get(url)
-        selector = etree.HTML(content.text)
-        ip = selector.xpath('//tr/td[1]/text()')
-        port = selector.xpath('//tr/td[2]/text()')
-        for i in range(len(ip)):
-            pro_list.append(ip[i] + ':' + port[i])
-        # time.sleep(300)
-        # 随机返回一个可用的ip和端口
-        return random.choice(pro_list)
-
-
 
 
 def create_pro(line):

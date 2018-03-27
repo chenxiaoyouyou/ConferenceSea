@@ -29,5 +29,3 @@ create table conference_speakers(
 	foreign key(speakers_id) references speakers(id)
 )engine=innodb;
 
-
-alter table `product' add CONSTRAINT `sid_ref` FOREIGN KEY (`sid`) REFERENCES `sealer` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION 
