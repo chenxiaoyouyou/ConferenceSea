@@ -35,7 +35,11 @@ class GainDetailInfoThread(threading.Thread):
         :return:
         """
         # 无限循环从redis中获取数据
+        i = 1
         while True:
+            print i
+            i += 1
+
             try:
 
                 url = self.redis_cli.spop('2017_urls')
@@ -55,9 +59,10 @@ class GainDetailInfoThread(threading.Thread):
                     requests.get("http://example.org", proxies=proxies)
                     """
 
-                    proxies = {"http":"http://" + get_proxy()}
+                    # proxies = {"http":"http://" + get_proxy()}
                     # 请求url
-                    content = requests.get(url, headers=self.headers, proxies=proxies)
+                    # content = requests.get(url, headers=self.headers, proxies=proxies)
+                    content = requests.get(url, headers=self.headers)
                     # 获取数据
                     html_selector = etree.HTML(content.text)
                     break
@@ -75,11 +80,12 @@ class GainDetailInfoThread(threading.Thread):
                 date_str = html_selector.xpath('//div[@class="date"]/text()')[0]
                 # 获取日期字符串
                 date_str = date_str.replace(',', ' ').replace('|', ' ').replace('\t', '').strip()
-                date_str = re.match(r'([^ ]+).*?([\d]{1,2}).*?([\d]{1,2}).*?([\d]{4})', date_str)
-                month = date_str.group(1)
+                date_str = re.match(r'([^ ]+) ([\d]{1,2}) - ([a-zA-Z]{3})?.*?([\d]{1,2}).*?([\d]{4})', date_str)
+                month1 = date_str.group(1)
                 start_day = date_str.group(2)
-                end_day = date_str.group(3)
-                year = date_str.group(4)
+                month2 = date_str.group(3)
+                end_day = date_str.group(4)
+                year = date_str.group(5)
                 # 月份字典,用于将英文月份转化为数字字符串
                 Month = {
                     'Jan': '01',
@@ -96,14 +102,19 @@ class GainDetailInfoThread(threading.Thread):
                     'Dec': '12'
                 }
                 # 开始日期和结束日期,格式为'1990-03-20'
-                start_date = year + '-' + Month.get(month) + '-' + start_day
-                end_date = year + '-' + Month.get(month) + '-' + end_day
+                if not month2:
+                    start_date = year + '-' + Month.get(month1) + '-' + start_day
+                    end_date = year + '-' + Month.get(month1) + '-' + end_day
+                else:
+                    start_date = year + '-' + Month.get(month1) + '-' + start_day
+                    end_date = year + '-' + Month.get(month2) + '-' + end_day
                 # 获取会议举行的地区,(列表)
                 area = html_selector.xpath('//div[@class="date"]/a/text()')
                 # 地区
                 area = area[0] + ',' + area[1]
                 # 组织机构
                 organizer = html_selector.xpath('//div[@class="speakers marT10"]/span/a/text()')[0]
+                organizer_url = html_selector.xpath('//div[@class="speakers marT10"]/span/a/@href')[0]
                 # 学科, 可能有多个学科
                 specialties_list = html_selector.xpath('//div[@class="speakers"]/span/a/text()')
                 specialities = ''
@@ -114,6 +125,18 @@ class GainDetailInfoThread(threading.Thread):
                 # 获取发言人信息
                 # speakers_list = html_selector.xpath('//h5/a/text()')
                 speakers_url_list = html_selector.xpath('//div[@id="speaker_confView"]/div/div/div/a/@href')
+
+                # 打开组织单位链接
+                try:
+                    self.headers['referer']=current_url
+                    organizer_info = requests.get(organizer_url, hearder=self.headers)
+                    organizer_info = etree.HTML(organizer_info)
+                    address = organizer_info.xpath('')
+                except Exception as e:
+                    print e
+
+
+
                 # 将会议的信息加入mysql数据库
                 try:
                     meeting_info = [title, current_url, start_date, end_date, area, organizer, specialities]
@@ -141,8 +164,9 @@ class GainDetailInfoThread(threading.Thread):
                 for url in speakers_url_list:
                     # 依次打开发言人url, 并从中获取信息
                     try:
-                        proxies = {"http": "http://" + get_proxy()}
-                        speaker_data = requests.get(url, headers=self.headers, proxies=proxies)
+                        # proxies = {"http": "http://" + get_proxy()}
+                        # speaker_data = requests.get(url, headers=self.headers, proxies=proxies)
+                        speaker_data = requests.get(url, headers=self.headers)
                         # 得到发言人页的信息
                         speaker_data = etree.HTML(speaker_data)
                         # 获取发言人姓名

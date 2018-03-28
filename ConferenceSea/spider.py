@@ -7,6 +7,7 @@ from config import logger, get_proxy
 import redis
 from multiprocessing import Pool
 from Queue import Queue
+import random
 
 
 class Spider1:
@@ -38,7 +39,7 @@ class Spider1:
         proxy = '--proxy-server=http://%s' % get_proxy()
         print proxy
         # 设置代理
-        chrome_opt.add_argument(proxy)
+        # chrome_opt.add_argument(proxy)
         # 构建浏览器对象
         self.driver = webdriver.Chrome(chrome_options=chrome_opt)
         # redis链接
@@ -88,9 +89,10 @@ class Spider1:
         try:
             view_more = self.driver.find_element_by_id('view_more')
             print '找到view_more'
-            ActionChains(driver=self.driver).move_to_element(view_more).click().perform()
-            # 暂停3秒
-            time.sleep(2)
+            # ActionChains(driver=self.driver).move_to_element(view_more).click().perform()
+            # 暂停1-3秒
+            view_more.click()
+            time.sleep(random.randint(1,3))
             self.view_mo()
         except:
             print '没有更多的view_more'
@@ -114,7 +116,7 @@ def main():
     :return:
     """
     page_queue = Queue()
-    file = open('./key/2018key_words.txt')
+    file = open('./key/123.txt')
     while True:
         line = file.readline()
         if not line:
@@ -124,7 +126,7 @@ def main():
 
     po = Pool(2)
     try:
-        for i in range(726):
+        for i in range(2):
             # 从队列中取出一个
             line = page_queue.get()
             # 创建子进程

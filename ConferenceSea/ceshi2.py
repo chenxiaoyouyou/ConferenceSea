@@ -1,18 +1,10 @@
 #coding=utf-8
-i = 1
-while i < 10:
-    i += 1
-    try:
-        print i
-        d
-    except:
-        print '错误'
-        continue
-    finally:
-        print 'finally'
-
-    print 'hello'
-
-
-
-
+import re
+a = """Mar 01 - dec 07, 2018&nbsp;&nbsp; | &nbsp;&nbsp;
+"""
+date_str = re.match(r'([^ ]+) ([\d]{1,2}) - ([a-zA-Z]{3})?.*?([\d]{1,2}).*?([\d]{4})', a)
+print date_str.group(1)
+print date_str.group(2)
+print date_str.group(3)
+print date_str.group(4)
+print date_str.group(5)

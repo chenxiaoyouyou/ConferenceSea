@@ -1646,3 +1646,1308 @@ DEBUG connectionpool.py : 395  "GET /free/ HTTP/1.1" 503 4
 INFO connectionpool.py : 788  Starting new HTTPS connection (1): www.kuaidaili.com
 DEBUG connectionpool.py : 395  "GET /free/ HTTP/1.1" 503 4
 INFO connectionpool.py : 788  Starting new HTTPS connection (1): www.kuaidaili.com
+INFO spider.py : 132  进程 0
+INFO spider.py : 132  进程 1
+INFO connectionpool.py : 788  Starting new HTTPS connection (1): www.kuaidaili.com
+INFO connectionpool.py : 788  Starting new HTTPS connection (1): www.kuaidaili.com
+DEBUG connectionpool.py : 395  "GET /free/ HTTP/1.1" 200 4754
+DEBUG connectionpool.py : 395  "GET /free/ HTTP/1.1" 503 4
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session {"requiredCapabilities": {}, "desiredCapabilities": {"platform": "ANY", "browserName": "chrome", "version": "", "chromeOptions": {"prefs": {"profile.managed_default_content_settings.images": 2}, "extensions": [], "args": []}, "javascriptEnabled": true}}
+DEBUG remote_connection.py : 510  Finished Request
+INFO spider.py : 49  https://www.emedevents.com/Conferences/searchConference?headerSearchType=conference&keywordSearch=china&custom_startdate=05%2F01%2F2018&custom_enddate=09%2F30%2F2018&search-time=customdate&pageId=1&browser_name_and_version=&pageId=1&browser_name_and_version=
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/url {"url": "https://www.emedevents.com/Conferences/searchConference?headerSearchType=conference&keywordSearch=china&custom_startdate=05%2F01%2F2018&custom_enddate=09%2F30%2F2018&search-time=customdate&pageId=1&browser_name_and_version=&pageId=1&browser_name_and_version=", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/element {"using": "id", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "view_more"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/moveto {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "element": "0.35935193595069137-1"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/click {"button": 0, "sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+DEBUG remote_connection.py : 510  Finished Request
+DEBUG remote_connection.py : 415  POST http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3/elements {"using": "xpath", "sessionId": "06f16dfc938d98d0ce230b03ecd026a3", "value": "//div[@class=\"conf_summery\"]/div[@class=\"c_name\"]/a"}
+ERROR spider.py : 80  [Errno 111] Connection refused
+ERROR spider.py : 81  没有找到信息
+INFO spider.py : 100  Donehttps://www.emedevents.com/Conferences/searchConference?headerSearchType=conference&keywordSearch=china&custom_startdate=05%2F01%2F2018&custom_enddate=09%2F30%2F2018&search-time=customdate&pageId=1&browser_name_and_version=&pageId=1&browser_name_and_version=
+DEBUG remote_connection.py : 415  DELETE http://127.0.0.1:36368/session/06f16dfc938d98d0ce230b03ecd026a3 {"sessionId": "06f16dfc938d98d0ce230b03ecd026a3"}
+INFO spider.py : 133  进程 0 
+INFO spider.py : 133  进程 1 
+INFO connectionpool.py : 788  Starting new HTTPS connection (1): www.kuaidaili.com 
+INFO connectionpool.py : 788  Starting new HTTPS connection (1): www.kuaidaili.com 
+INFO spider.py : 49  https://www.emedevents.com/Conferences/searchConference?headerSearchType=conference&keywordSearch=china&custom_startdate=01%2F01%2F2018&custom_enddate=04%2F30%2F2018&search-time=customdate&pageId=1&browser_name_and_version=&pageId=1&browser_name_and_version= 
+ERROR spider.py : 80  Message: chrome not reachable
+  (Session info: chrome=50.0.2661.102)
+  (Driver info: chromedriver=2.21.371461 (633e689b520b25f3e264a2ede6b74ccc23cb636a),platform=Linux 4.4.0-31-generic x86_64)
+ 
+ERROR spider.py : 81  没有找到信息 
+INFO spider.py : 101  Donehttps://www.emedevents.com/Conferences/searchConference?headerSearchType=conference&keywordSearch=china&custom_startdate=01%2F01%2F2018&custom_enddate=04%2F30%2F2018&search-time=customdate&pageId=1&browser_name_and_version=&pageId=1&browser_name_and_version= 

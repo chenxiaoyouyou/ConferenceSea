@@ -1,5 +1,11 @@
 create database conference_sea charset=utf8;
 
+CREATE table organizers(
+	id int UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
+	url VARCHAR(100) UNIQUE NOT NULL,
+	name VARCHAR(100)
+)ENGINE = innodb;
+# 组织为1, 会议为多
 create table conference (
 	id int unsigned not null auto_increment primary key,
 	title varchar(150) not null,
@@ -7,8 +13,9 @@ create table conference (
 	start_date date,
 	end_date date,
 	area varchar(50),
-	organized varchar(100),
-	specialties varchar(100)
+	specialties varchar(100),
+	organizer_id INT UNSIGNED,
+	FOREIGN KEY (organizer_id) REFERENCES organizers(id)
 )engine=innodb;
 
 create table speakers(
@@ -29,3 +36,10 @@ create table conference_speakers(
 	foreign key(speakers_id) references speakers(id)
 )engine=innodb;
 
+create TABLE organizers_speakers(
+	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	organizers_id INT UNSIGNED,
+	speakers_id INT UNSIGNED,
+	FOREIGN KEY (organizers_id) REFERENCES organizers(id),
+	FOREIGN KEY (speakers_id) REFERENCES speakers(id)
+)engine=innobd;
