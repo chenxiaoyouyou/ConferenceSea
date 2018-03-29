@@ -119,6 +119,7 @@ class GainDetailInfoThread(threading.Thread):
                 # 学科, 可能有多个学科
                 specialties_list = html_selector.xpath('//div[@class="speakers"]/span/a/text()')
                 specialities = ''
+                # 可采用模糊查询得到结果
                 for spe in specialties_list:
                     specialities += (spe + ',')
                 # 最终学科字符串
@@ -131,9 +132,11 @@ class GainDetailInfoThread(threading.Thread):
                 try:
                     self.headers['referer']=current_url
                     organizer_info = requests.get(organizer_url, hearder=self.headers)
-                    organizer_info = etree.HTML(organizer_info)
-                    address = organizer_info.xpath('')
+                    organizer_info = etree.HTML(organizer_info.text)
+                    address = organizer_info.xpath('//div[@class="location"]/text()')
+                    address = address[0].strip() + address[1].strip()
                 except Exception as e:
+                    logger.error(e)
                     print e
 
 
@@ -164,51 +167,7 @@ class GainDetailInfoThread(threading.Thread):
 
                 for url in speakers_url_list:
                     # 依次打开发言人url, 并从中获取信息
-                    try:
-                        # proxies = {"http": "http://" + get_proxy()}
-                        # speaker_data = requests.get(url, headers=self.headers, proxies=proxies)
-                        speaker_data = requests.get(url, headers=self.headers)
-                        # 得到发言人页的信息
-                        speaker_data = etree.HTML(speaker_data)
-                        # 获取发言人姓名
-                        name = speaker_data.xpath('//h1/text()')[0]
-                        name = name.strip()
-                        # 职位信息
-                        position = (speaker_data.xpath('//h1/../text()')[1].strip())
-                        # 发言主题
-                        speaker_specialities = speaker_data.xpath('//h2[@id="moreSpecilty"]/following-sibling::div[1]/text()')[0].strip()
-                        # 兴趣主题
-                        speaker_interested = speaker_data.xpath('//h2[@id="moreTopics"]/following-sibling::div[1]/text()')[0].strip()
-                        # 如果作者没有填写相关信息,则设置为none
-                        if speaker_specialities == 'This section has yet to be updated by the speaker':
-                            speaker_specialities = None
-                        if speaker_interested == 'This section has yet to be updated by the speaker':
-                            speaker_interested = None
-                    except Exception as e:
-                        logger.error(e)
-                        logger.error('查找发言人信息失败')
-                        position = None
-                        speaker_specialities = None
-                        speaker_interested = None
 
-                    # 将查询到的发言人信息写进数据库(url和名字是必须信息,如果没有的话,不写入数据库)
-                    if all([url, name]):
-                        try:
-                            speaker_info = [url, name, position, speaker_specialities, speaker_interested]
-                            cursor = self.mysql_cli.cursor()
-                            cursor.execute('insert into speakers(url, name, position, specialties, interested) VALUES (%s, %s, %s, %s, %s)' , speaker_info)
-                            url = [url, ]
-                            speaker_id = cursor.execute('select id from speakers where url = %s', url)
-                            # 提交插入信息
-                            self.mysql_cli.commit()
-                        except Exception as e:
-                            self.mysql_cli.rollback()
-                            logger.error(e)
-                            logger.error('发言人信息插入失败')
-                            # 失败的话可以直接进行下一次循环
-                            continue
-                        finally:
-                            cursor.close()
 
                     # 将会议信息和发言人信息加入关系表
                     if all([conference_id, speaker_id]):
@@ -224,5 +183,72 @@ class GainDetailInfoThread(threading.Thread):
                         finally:
                             # 关闭游标
                             cursor.close()
-        # 无线循环跳出以后,没有后续梳理任务后,关闭数据库链接
+        # 无线循环跳出以后,没有后续任务后,关闭mysql数据库链接
         self.mysql_cli.close()
+
+    def gain_speaker_info(self, url, referer):
+        """
+        根据url获取发言人的信息
+        :param url: 发言人自己的链接
+        referer: 当前链接,作为请求头的referer
+        :return: 返回该条信息在数据库中的id
+        """
+        try:
+            # proxies = {"http": "http://" + get_proxy()}
+            # speaker_data = requests.get(url, headers=self.headers, proxies=proxies)
+            self.headers['referer'] = referer
+            speaker_data = requests.get(url, headers=self.headers)
+            # 得到发言人页的信息
+            speaker_data = etree.HTML(speaker_data)
+            # 获取发言人姓名
+            name = speaker_data.xpath('//h1/text()')[0]
+            name = name.strip()
+            # 职位信息
+            position = speaker_data.xpath('//h1/../text()')[1].strip()
+            # 发言主题
+            speaker_specialities = speaker_data.xpath('//h2[@id="moreSpecilty"]/following-sibling::div[1]/text()')[
+                0].strip()
+            # 兴趣主题
+            speaker_interested = speaker_data.xpath('//h2[@id="moreTopics"]/following-sibling::div[1]/text()')[
+                0].strip()
+            # 如果作者没有填写相关信息,则设置为none
+            if speaker_specialities == 'This section has yet to be updated by the speaker':
+                speaker_specialities = None
+            if speaker_interested == 'This section has yet to be updated by the speaker':
+                speaker_interested = None
+        except Exception as e:
+            logger.error(e)
+            logger.error('查找发言人信息失败')
+            position = None
+            name = None
+            speaker_specialities = None
+            speaker_interested = None
+
+        # 将查询到的发言人信息写进数据库(url和名字是必须信息,如果没有的话,不写入数据库)
+        if all([url, name]):
+            cursor = self.mysql_cli.cursor()
+            try:
+                speaker_info = [url, name, position, speaker_specialities, speaker_interested]
+                cursor.execute(
+                    'insert into speakers(url, name, position, specialties, interested) VALUES (%s, %s, %s, %s, %s)',
+                    speaker_info)
+                # 提交插入信息
+                self.mysql_cli.commit()
+            except Exception as e:
+                self.mysql_cli.rollback()
+                logger.error(e)
+                logger.error('发言人信息插入失败')
+                # 如果该条信息已经存在的话也会插入失败
+                # 失败的话可以直接进行下一次循环
+            #　尝试查询该ｕｒｌ所指示的任务信息
+            try:
+                url = [url, ]
+                speaker_id = cursor.execute('select id from speakers where url = %s', url)
+            except Exception as e:
+                logger.error(e)
+                logger.error('查询数据库出错')
+                speaker_id = None
+        else:
+            speaker_id = None
+
+        return speaker_id

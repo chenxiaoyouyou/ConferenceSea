@@ -42,4 +42,4 @@ create TABLE organizers_speakers(
 	speakers_id INT UNSIGNED,
 	FOREIGN KEY (organizers_id) REFERENCES organizers(id),
 	FOREIGN KEY (speakers_id) REFERENCES speakers(id)
-)engine=innobd;
+)engine=innodb;
