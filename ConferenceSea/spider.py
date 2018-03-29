@@ -35,9 +35,9 @@ class Spider1:
         prefs = {"profile.managed_default_content_settings.images": 2}
         chrome_opt.add_experimental_option('prefs', prefs)
         # 设置请求referer为该网站的首页
-        # chrome_opt.add_argument('Referer=https://www.emedevents.com/')
-        proxy = '--proxy-server=http://%s' % get_proxy()
-        print proxy
+        chrome_opt.add_argument('Referer=https://www.emedevents.com/')
+        # proxy = '--proxy-server=http://115.28.146.28:16816'
+        # print proxy
         # 设置代理
         # chrome_opt.add_argument(proxy)
         # 构建浏览器对象
@@ -73,7 +73,8 @@ class Spider1:
             try:
                 # 将每个a标签的href写进redis
                 for url in url_list:
-                    self.redis_cli.sadd('2017_urls', url.get_attribute('href'))
+                    # self.redis_cli.sadd('2017_urls', url.get_attribute('href'))
+                    print url.get_attribute('href')
             except Exception as e:
                 logger.error(e)
                 logger.error('redis错误')
@@ -91,15 +92,15 @@ class Spider1:
             print '找到view_more'
             # ActionChains(driver=self.driver).move_to_element(view_more).click().perform()
             # 暂停1-3秒
-            view_more.click()
             time.sleep(random.randint(1,3))
+            view_more.click()
             self.view_mo()
         except:
             print '没有更多的view_more'
             return
 
     def end(self):
-        logger.info('Done'+ self.url)
+        logger.error('Done'+ self.url)
         self.driver.quit()
         print '结束运行'
 
@@ -126,7 +127,7 @@ def main():
 
     po = Pool(2)
     try:
-        for i in range(2):
+        for i in range(1197):
             # 从队列中取出一个
             line = page_queue.get()
             # 创建子进程

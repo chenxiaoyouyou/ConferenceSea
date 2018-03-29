@@ -14,9 +14,10 @@ class GainDetailInfoThread(threading.Thread):
 
     def __init__(self):
         threading.Thread.__init__(self)
-        self.headers = {'Accept': '*/*',
-                        'Cache-Control': 'max-age=0',
-                        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36',
+        self.headers = {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                        'Accept - Encoding': 'gzip',
+                        'Cache-Control': 'no-cache',
+                        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
                         'Connection': 'keep-alive',
                         }
         # 创建一个redis链接
@@ -143,10 +144,10 @@ class GainDetailInfoThread(threading.Thread):
                     # 游标
                     cursor = self.mysql_cli.cursor()
                     # 准备加一个锁
-                    cursor.execute('insert into conference(title, url, start_date, end_date, area, organized, specialties) VALUES (%s, %s, %s, %s, %s, %s, %s)', meeting_info)
+                    cursor.execute('insert into conferences(title, url, start_date, end_date, area, organized, specialties) VALUES (%s, %s, %s, %s, %s, %s, %s)', meeting_info)
                     self.mysql_cli.commit()
                     paras2 = [current_url,]
-                    cursor.execute('select id from conference where url = %s', paras2)
+                    cursor.execute('select id from conferences where url = %s', paras2)
                     # 获取该条数据在数据库中的id, fetchone结果为元祖
                     conference_id = cursor.fetchone()[0]
 
@@ -214,7 +215,7 @@ class GainDetailInfoThread(threading.Thread):
                         try:
                             cursor = self.mysql_cli.cursor()
                             # 将二者关系插入关系表
-                            cursor.execute('insert into conference_speakers(conference_id, speakers_id) VALUES (%s, %s)', [conference_id, speaker_id])
+                            cursor.execute('insert into conferences_speakers(conference_id, speakers_id) VALUES (%s, %s)', [conference_id, speaker_id])
                             cursor.commit()
                         except Exception as e:
                             self.mysql_cli.rollback()
