@@ -6,7 +6,7 @@ CREATE table organizers(
 	name VARCHAR(100)
 )ENGINE = innodb;
 # 组织为1, 会议为多
-create table conference (
+create table conferences (
 	id int unsigned not null auto_increment primary key,
 	title varchar(150) not null,
 	url varchar(200) not null unique,
@@ -28,11 +28,11 @@ create table speakers(
 )engine=innodb;
 
 
-create table conference_speakers(
+create table conferences_speakers(
 	id int unsigned auto_increment primary key,
 	conference_id int unsigned,
 	speakers_id int unsigned,
-	foreign key(conference_id) references conference(id),
+	foreign key(conference_id) references conferences(id),
 	foreign key(speakers_id) references speakers(id)
 )engine=innodb;
 
