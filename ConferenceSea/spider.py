@@ -127,9 +127,11 @@ def main():
 
     po = Pool(2)
     try:
-        for i in range(1197):
+        for i in range(1060):
             # 从队列中取出一个
             line = page_queue.get()
+            if not line:
+                break
             # 创建子进程
             po.apply_async(create_pro, (line,))
             logger.info('进程 %s' % i)
