@@ -7,13 +7,14 @@ import threading
 from config import logger, get_proxy
 import re
 
-class GainDetailInfoThread(threading.Thread):
+# class GainDetailInfoThread(threading.Thread):
+
+class GainDetailInfoThread:
     """
     获取每个会议的详细信息
     """
-
     def __init__(self):
-        threading.Thread.__init__(self)
+        # threading.Thread.__init__(self)
         self.headers = {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
                         'Accept - Encoding': 'gzip',
                         'Cache-Control': 'no-cache',
@@ -36,20 +37,27 @@ class GainDetailInfoThread(threading.Thread):
         :return:
         """
         # 无限循环从redis中获取数据
+        # i = 1
+        # while True:
+        #     print i
+        #     i += 1
+        #
+        #     try:
+        #
+        #         # url = self.redis_cli.spop('2017_urls')
+        #     except Exception as e:
+        #         logger.error(e)
+        #         logger.error('从redis中取数据出错')
+        #     if not url:
+        #         break
+            # 多次尝试打开一个网页,打开就直接跳出,打开失败尝试再次打开
+        url = "https://www.emedevents.com/c/medical-conferences-2018/ethical-principles-in-the-practice-of-virginia-mental-health-professionals-mar-29-2018-1"
         i = 1
         while True:
-            print i
             i += 1
-
-            try:
-
-                url = self.redis_cli.spop('2017_urls')
-            except Exception as e:
-                logger.error(e)
-                logger.error('从redis中取数据出错')
-            if not url:
+            if i > 2:
                 break
-            # 多次尝试打开一个网页,打开就直接跳出,打开失败尝试再次打开
+
             times = 4
             html_selector = None
             while times > 0:
@@ -71,7 +79,7 @@ class GainDetailInfoThread(threading.Thread):
                     logger.error(e)
                     logger.error('打开网页失败')
 
-            if html_selector:
+            if html_selector is not None:
                 # 存在网页数据, 从中取出需要的数据
                 # 链接地址
                 current_url = url
@@ -109,13 +117,19 @@ class GainDetailInfoThread(threading.Thread):
                 else:
                     start_date = year + '-' + Month.get(month1) + '-' + start_day
                     end_date = year + '-' + Month.get(month2) + '-' + end_day
+
+                print start_date
+                print end_date
                 # 获取会议举行的地区,(列表)
                 area = html_selector.xpath('//div[@class="date"]/a/text()')
                 # 地区
                 area = area[0] + ',' + area[1]
+                print area
                 # 组织机构
                 organizer = html_selector.xpath('//div[@class="speakers marT10"]/span/a/text()')[0]
                 organizer_url = html_selector.xpath('//div[@class="speakers marT10"]/span/a/@href')[0]
+                print organizer
+                print organizer_url
                 # 学科, 可能有多个学科
                 specialties_list = html_selector.xpath('//div[@class="speakers"]/span/a/text()')
                 specialities = ''
@@ -124,49 +138,50 @@ class GainDetailInfoThread(threading.Thread):
                     specialities += (spe + ',')
                 # 最终学科字符串
                 specialities = specialities.strip(',')
+                print specialities
                 # 获取发言人信息
                 # speakers_list = html_selector.xpath('//h5/a/text()')
                 speakers_url_list = html_selector.xpath('//div[@id="speaker_confView"]/div/div/div/a/@href')
 
                 # 打开组织单位链接
-                try:
-                    self.headers['referer']=current_url
-                    organizer_info = requests.get(organizer_url, hearder=self.headers)
-                    organizer_info = etree.HTML(organizer_info.text)
-                    address = organizer_info.xpath('//div[@class="location"]/text()')
-                    address = address[0].strip() + address[1].strip()
-                except Exception as e:
-                    logger.error(e)
-                    print e
+
 
 
 
                 # 将会议的信息加入mysql数据库
                 try:
-                    meeting_info = [title, current_url, start_date, end_date, area, organizer, specialities]
+                    meeting_info = [title, current_url, start_date, end_date, area, 1, specialities]
                     # 游标
                     cursor = self.mysql_cli.cursor()
                     # 准备加一个锁
-                    cursor.execute('insert into conferences(title, url, start_date, end_date, area, organized, specialties) VALUES (%s, %s, %s, %s, %s, %s, %s)', meeting_info)
-                    self.mysql_cli.commit()
+                    sql = "insert into conferences(title, url, start_date, end_date, area, organizer_id, specialties) VALUES ('%s', '%s', '%s', '%s', '%s', '%d', '%s')" % (title, current_url, start_date, end_date, area, 1, specialities)
+                    # cursor.execute(sql)
+                    # self.mysql_cli.commit()
                     paras2 = [current_url,]
-                    cursor.execute('select id from conferences where url = %s', paras2)
+                    print 123
+                    sql = "select id from conferences where url = '%s'" % current_url
+                    cursor.execute(sql)
+                    print 456
                     # 获取该条数据在数据库中的id, fetchone结果为元祖
                     conference_id = cursor.fetchone()[0]
+                    print str(conference_id) + '----conference_id'
 
                 except Exception as e:
                     # 发生错误,数据库回滚
                     self.mysql_cli.rollback()
                     logger.error(e)
                     logger.error('插入数据错误')
+                    print '插入会议信息错误'
+
                     # 会议信息加入数据库失败的话,就不在查找发言人信息,直接进行下一次循环
                     continue
                 finally:
                     cursor.close()
 
-
-                for url in speakers_url_list:
+                for speaker_url in speakers_url_list:
                     # 依次打开发言人url, 并从中获取信息
+                    print speaker_url
+                    speaker_id = self.gain_speaker_info(speaker_url, url)
 
 
                     # 将会议信息和发言人信息加入关系表
@@ -252,3 +267,27 @@ class GainDetailInfoThread(threading.Thread):
             speaker_id = None
 
         return speaker_id
+
+
+    def gain_organizer_info(self, url, referer):
+        """
+        获取当前会议组着单位信息,
+        :param url: 组织url
+        :param referer: 当期网页的Referer
+        :return: 该组织在数据库中的id
+        """
+        try:
+            self.headers['referer'] = referer
+            organizer_info = requests.get(url, hearder=self.headers)
+            organizer_info = etree.HTML(organizer_info.text)
+            address = organizer_info.xpath('//div[@class="location"]/text()')
+            address = address[0].strip() + address[1].strip()
+        except Exception as e:
+            logger.error(e)
+            print e
+
+
+
+if __name__ == '__main__':
+    meetingspider = GainDetailInfoThread()
+    meetingspider.run()

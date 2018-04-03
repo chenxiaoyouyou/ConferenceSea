@@ -36,10 +36,10 @@ class Spider1:
         chrome_opt.add_experimental_option('prefs', prefs)
         # 设置请求referer为该网站的首页
         chrome_opt.add_argument('Referer=https://www.emedevents.com/')
-        # proxy = '--proxy-server=http://115.28.146.28:16816'
+        proxy = '--proxy-server=http://115.28.146.28:16816'
         # print proxy
         # 设置代理
-        # chrome_opt.add_argument(proxy)
+        chrome_opt.add_argument(proxy)
         # 构建浏览器对象
         self.driver = webdriver.Chrome(chrome_options=chrome_opt)
         # redis链接
@@ -71,6 +71,7 @@ class Spider1:
                 # 加载完成时把第一页的写入
                 for url in url_list:
                     self.redis_cli.sadd('2017_urls', url.get_attribute('href'))
+                    print url
                     print url.get_attribute('href')
             except Exception as e:
                 logger.error(e)
