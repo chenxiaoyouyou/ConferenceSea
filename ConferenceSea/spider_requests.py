@@ -12,10 +12,8 @@ import Queue
 class UrlSpider(threading.Thread):
     def __init__(self, q):
         threading.Thread.__init__(self)
-
         # 获取队列
         self.q = q
-
         # 代理
         # proxies = {
         #     'http': 'http://username:password@117.201.23.54:9000'
@@ -51,6 +49,8 @@ class UrlSpider(threading.Thread):
             # 每次请求之间的时间间隔
             time.sleep(random.randint(3, 5))
             line = self.q.get()
+            if not line:
+                break
             # 得到检索的关键信息
             keywords, begin_date, end_date = line.split()
             print keywords + begin_date + end_date
@@ -77,17 +77,30 @@ class UrlSpider(threading.Thread):
 
     def gain_first_page(self):
         # 发起请求
-        response = requests.get(self.url, headers=self.headers, proxies=self.proxies,verify=False)
+        i = 1
+        while 1<4:
+            i += 1
+            try:
+                response = requests.get(self.url, headers=self.headers, proxies=self.proxies,verify=False)
+                break
+            except Exception as e:
+                logger.error(e)
+                logger.error('请求失败')
+                response = None
+
+        if not response:
+            return
+
         selector = etree.HTML(response.text)
-        # 选择除url_list
+        # 选择除url_list(会议的url)
         url_list = selector.xpath('//div[@class="conf_summery"]/div[@class="c_name"]/a/@href')
         org_start_date = selector.xpath('//input[@id="org_start_date"]/@value')[0]
-        print org_start_date
+        # print org_start_date
         org_end_date = selector.xpath('//input[@id="org_end_date"]/@value')[0]
-        print org_end_date
+        # print org_end_date
 
         # 将url写进数据库
-        if url_list is not None:
+        if url_list:
             try:
                 # 加载完成时把第一页的写入
                 for url in url_list:
@@ -99,11 +112,9 @@ class UrlSpider(threading.Thread):
 
             # 查找有没有view_more
             view_more = selector.xpath('//a[@id="view_more"]')
-            if view_more is not None:
+            if view_more:
                 self.gain_others(org_start_date, org_end_date)
                 print 'gain_others'
-
-
 
     def gain_others(self, org_start_date,org_end_date):
 
@@ -141,13 +152,22 @@ class UrlSpider(threading.Thread):
             # Origin:https: // www.emedevents.com
             self.headers['HOST'] = 'www.emedevents.com'
             self.headers['Origin'] = 'https: // www.emedevents.com'
-
             # 发起post请求
-            response = requests.post(url1, headers=self.headers, data=form_data, proxies = self.proxies, verify=False)
-            # print response.text
+            a = 1
+            while a<3:
+                a += 1
+                try:
+                    response = requests.post(url1, headers=self.headers, data=form_data, proxies = self.proxies, verify=False)
+                    break
+                except Exception as e:
+                    logger.error(e)
+                    logger.error('点击view_more失败')
+                    response = None
+            if not response:
+                return
             selector = etree.HTML(response.text)
             url_list = selector.xpath('//div[@class="conf_summery"]/div[@class="c_name"]/a/@href')
-            if url_list is not None:
+            if url_list:
                 try:
                     # 加载完成时把第一页的写入
                     for url in url_list:
@@ -160,7 +180,7 @@ class UrlSpider(threading.Thread):
                     logger.error('redis错误')
             i += 1
             # 当页数过大,不再有数据,跳出循环
-            if url_list is None:
+            if not url_list:
                 break
 
 
@@ -173,7 +193,8 @@ def main():
             break
         # 将关键字信息加入队列
         page_queue.put(line)
-    for i in range(1):
+    # 三个线程
+    for i in range(4):
         spider = UrlSpider(page_queue)
         spider.start()
 
