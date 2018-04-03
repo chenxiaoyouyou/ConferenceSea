@@ -19,5 +19,6 @@ selector1 = etree.HTML(file1.read())
 location = selector1.xpath('//div[@class="location"]/text()')
 print location[0].strip() + location[1].strip()
 view_all = selector1.xpath('//div[@class="people-info marT10"]/a')
+print '*'*30
 print view_all
 # 不在获取view-all, 直接查找
