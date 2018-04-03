@@ -36,7 +36,7 @@ class Spider1:
         chrome_opt.add_experimental_option('prefs', prefs)
         # 设置请求referer为该网站的首页
         chrome_opt.add_argument('Referer=https://www.emedevents.com/')
-        proxy = '--proxy-server=http://115.28.146.28:16816'
+        proxy = '--proxy-server=http://114.215.174.49:16818'
         # print proxy
         # 设置代理
         chrome_opt.add_argument(proxy)
