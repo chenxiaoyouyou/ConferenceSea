@@ -8,3 +8,6 @@ print date_str.group(2)
 print date_str.group(3)
 print date_str.group(4)
 print date_str.group(5)
+begin_date = '01/05/2016'
+year = begin_date[-4:]
+print year
