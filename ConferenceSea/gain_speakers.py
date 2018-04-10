@@ -22,8 +22,14 @@ class SpeakerSpider(threading.Thread):
 
     def __init__(self, page_queue):
         threading.Thread.__init__(self)
-        self.key_word = page_queue.get()
-        self.url = 'https://www.emedevents.com/Speakers/viewAllSpeakers?data[headerSearchForm][search_type]=speaker&data[SearchSpeaker][speaker_name]=%s' % self.key_word
+
+        # 代理
+        self.proxies = {
+            'http': 'http://114.67.228.126:16817',
+            # 'https': 'http://chenzhiyou0320@163.com:lwslf70d@114.215.174.49:16818'
+        }
+
+        self.page_queue = page_queue
         self.headers = {
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36",
@@ -37,6 +43,22 @@ class SpeakerSpider(threading.Thread):
         # print self.url
 
     def run(self):
+        print "开始采集"
+        while True:
+            # 队列中有数据的话一直运行
+            self.key_word = self.page_queue.get()
+            logger.error(self.key_word)
+            if not self.key_word:
+                # 队列空了, 结束运行
+                break
+            self.url = 'https://www.emedevents.com/Speakers/viewAllSpeakers?data[headerSearchForm][search_type]=speaker&data[SearchSpeaker][speaker_name]=%s' % self.key_word
+            # 开始爬取
+            self.start_spider()
+        print "结束采集"
+
+
+
+    def start_spider(self):
         # 获取第一页数据
         first_page_data = self.get_first_list_page()
         if first_page_data is None:
@@ -83,7 +105,7 @@ class SpeakerSpider(threading.Thread):
             # 一次请求失败的话,多次发起请求
             times += 1
             try:
-                response = requests.get(self.url, headers=self.headers, timeout=30)
+                response = requests.get(self.url, headers=self.headers, timeout=30, proxies = self.proxies)
                 # 请求成功, 跳出循环
                 break
             except Exception as e:
@@ -110,7 +132,7 @@ class SpeakerSpider(threading.Thread):
             "speaker_location": "",
         }
         try:
-            response = requests.post(cur_url, data=post_data, timeout = 30)
+            response = requests.post(cur_url, data=post_data, timeout = 30, proxies = self.proxies)
         except Exception as e:
             logger.error(e)
             return None
@@ -134,7 +156,7 @@ class SpeakerSpider(threading.Thread):
             try:
             # proxies = {"http": "http://" + get_proxy()}
             # speaker_data = requests.get(url, headers=self.headers, proxies=proxies)
-                speaker_data = requests.get(speaker_url, headers=headers)
+                speaker_data = requests.get(speaker_url, headers=headers, proxies = self.proxies)
                 break
             except Exception as e:
                 logger.error(e)
