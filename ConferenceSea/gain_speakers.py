@@ -92,7 +92,8 @@ class SpeakerSpider(threading.Thread):
                 # 查找人物信息
                 speaker = self.get_speaker(url)
                 # 写入数据库
-                self.save(speaker)
+                if speaker:
+                    self.save(speaker)
                 time.sleep(random.randint(1,5))
 
 
@@ -162,41 +163,49 @@ class SpeakerSpider(threading.Thread):
                 logger.error(e)
                 logger.error('查找发言人信息失败')
                 speaker_data = None
+
         # 一直没有数据的话,返回
         if not speaker_data:
             return None
+
+        # 获取信息
+        try:
         # 得到发言人页的信息
-        speaker_data = etree.HTML(speaker_data.content)
-        # 获取发言人姓名
-        name = speaker_data.xpath('//h1/text()')[0]
-        name = name.strip()
-        # 职位信息
-        position_area = speaker_data.xpath('//h1/../text()')[1].strip()
-        # 有的没有职位信息
-        # 或者只有地址,没有职位
-        if not position_area:
-            position = ''
-            address = ''
-        else:
-            # 匹配竖线, 有的话为有职位,没有的话只有地址
-            line = re.match(r'(.*?)\|(.*)', position_area)
-            if line:
-                address = line.group(2)
-                position = line.group(1)
-            else:
+            speaker_data = etree.HTML(speaker_data.content)
+            # 获取发言人姓名
+            name = speaker_data.xpath('//h1/text()')[0]
+            name = name.strip()
+            # 职位信息
+            position_area = speaker_data.xpath('//h1/../text()')[1].strip()
+            # 有的没有职位信息
+            # 或者只有地址,没有职位
+            if not position_area:
                 position = ''
-                address = position_area
-        # 发言主题
-        speaker_specialities = speaker_data.xpath('//h2[@id="moreSpecilty"]/following-sibling::div[1]/text()')[
-            0].strip()
-        # 兴趣主题
-        speaker_interested = speaker_data.xpath('//h2[@id="moreTopics"]/following-sibling::div[1]/text()')[
-            0].strip()
-        # 如果作者没有填写相关信息,则设置为none
-        if speaker_specialities == 'This section has yet to be updated by the speaker':
-            speaker_specialities = ''
-        if speaker_interested == 'This section has yet to be updated by the speaker':
-            speaker_interested = ''
+                address = ''
+            else:
+                # 匹配竖线, 有的话为有职位,没有的话只有地址
+                line = re.match(r'(.*?)\|(.*)', position_area)
+                if line:
+                    address = line.group(2)
+                    position = line.group(1)
+                else:
+                    position = ''
+                    address = position_area
+            # 发言主题
+            speaker_specialities = speaker_data.xpath('//h2[@id="moreSpecilty"]/following-sibling::div[1]/text()')[
+                0].strip()
+            # 兴趣主题
+            speaker_interested = speaker_data.xpath('//h2[@id="moreTopics"]/following-sibling::div[1]/text()')[
+                0].strip()
+            # 如果作者没有填写相关信息,则设置为none
+            if speaker_specialities == 'This section has yet to be updated by the speaker':
+                speaker_specialities = ''
+            if speaker_interested == 'This section has yet to be updated by the speaker':
+                speaker_interested = ''
+        except Exception as e:
+            logger.error(e)
+            logger.error("发言人信息读取失败")
+            return None
         # 构建speaker对象,方便存储
         speaker = Speaker()
         speaker.name = name
