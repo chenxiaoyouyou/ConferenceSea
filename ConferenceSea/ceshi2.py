@@ -11,3 +11,6 @@ print date_str.group(5)
 begin_date = '01/05/2016'
 year = begin_date[-4:]
 print year
+a = []
+if  not a:
+    print 489684
