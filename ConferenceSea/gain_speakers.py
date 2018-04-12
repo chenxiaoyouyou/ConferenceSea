@@ -24,16 +24,16 @@ class SpeakerSpider(threading.Thread):
         threading.Thread.__init__(self)
         self.thread_name = thread_name
         # 代理
-        # self.proxies = {
-        #     'http': 'http://114.67.228.126:16817',
-        #     # 'https': 'http://chenzhiyou0320@163.com:lwslf70d@114.215.174.49:16818'
-        # }
+        self.proxies = {
+            'http': 'http://122.114.214.159:16817',
+            # 'https': 'http://chenzhiyou0320@163.com:lwslf70d@114.215.174.49:16818'
+        }
         self.page_queue = page_queue
         self.headers = {
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36",
             "Cache-Control": "no-cache",
-            "Connection": "keep-alive",
+            # "Connection": "keep-alive",
         }
         # 开始url
         self.start_url = "https://www.emedevents.com/Speakers/viewAllSpeakers?data[headerSearchForm][search_type]=speaker"
@@ -41,7 +41,7 @@ class SpeakerSpider(threading.Thread):
         self.start_page = page_queue.get()
         print self.start_page
         self.page = self.start_page
-        self.mysql_cli = pymysql.connect(host='192.168.204.140', port=3306, database='conference', user='root', password='mysql', charset='utf8')
+        self.mysql_cli = pymysql.connect(host='localhost', port=3306, database='conference', user='root', password='mysql', charset='utf8')
         self.cursor = self.mysql_cli.cursor()
 
         # print self.url
@@ -76,20 +76,23 @@ class SpeakerSpider(threading.Thread):
 
             print 'get_other_page'
             other_page_data = self.get_other_list_page()
+            print 'get_data'
             # 某一页请求失败的话，直接进行下一次循环
             if other_page_data is None:
                 continue
             url_list = self.parse_data(other_page_data)
+            print url_list
             logger.error(self.thread_name + "********" + str(self.page))
 
             # 针对三个线程,设定不同的跳出条件
-            if self.start_page == 1:
+            if self.start_page == 87:
                 # 从第一页开始,到4000页结束
+                # self.page = 4000
                 if self.page >= 4000:
                     break
-            elif self.start_page == 4000:
+            elif self.start_page == 4087:
                 # 从第4000页开始,到7000页结束
-                if self.page >= 7000:
+                if self.page >= 7087:
                     break
             else:
                 # 从7000页开始
@@ -98,6 +101,7 @@ class SpeakerSpider(threading.Thread):
                     break
             # 页码加1
             self.page += 1
+            print self.page
             for url in url_list:
                 # 查找人物信息
                 speaker = self.get_speaker(url)
@@ -116,7 +120,7 @@ class SpeakerSpider(threading.Thread):
             # 一次请求失败的话,多次发起请求
             times += 1
             try:
-                response = requests.get(self.start_url, headers=self.headers, timeout=30)
+                response = requests.get(self.start_url, headers=self.headers, timeout=30, proxies = self.proxies)
                 # 请求成功, 跳出循环
                 break
             except Exception as e:
@@ -143,7 +147,7 @@ class SpeakerSpider(threading.Thread):
             "speaker_location": "",
         }
         try:
-            response = requests.post(cur_url, data=post_data, timeout = 30)
+            response = requests.post(cur_url, data=post_data, timeout = 30, proxies=self.proxies)
         except Exception as e:
             logger.error(e)
             return None
@@ -162,11 +166,11 @@ class SpeakerSpider(threading.Thread):
         headers = self.headers
         headers['Referer'] = self.start_url
         times = 1
-        while times <4:
+        while times < 4:
             times += 1
             try:
-            # proxies = {"http": "http://" + get_proxy()}
-            # speaker_data = requests.get(url, headers=self.headers, proxies=proxies)
+                # proxies = {"http": "http://" + get_proxy()}
+                # speaker_data = requests.get(url, headers=self.headers, proxies=proxies)
                 speaker_data = requests.get(speaker_url, headers=headers)
                 break
             except Exception as e:
@@ -177,7 +181,6 @@ class SpeakerSpider(threading.Thread):
         # 一直没有数据的话,返回
         if not speaker_data:
             return None
-
         # 获取信息
         try:
         # 得到发言人页的信息
@@ -224,6 +227,7 @@ class SpeakerSpider(threading.Thread):
         speaker.interested = speaker_interested
         speaker.specialities = speaker_specialities
         speaker.address = address
+        # print speaker.url
         return speaker
 
 
@@ -251,7 +255,7 @@ def main():
     page_queue = Queue()
     # file = open('./key/speaker_words')
     # 三个线程,分别从这三个页码开始爬取
-    for i in [1, 4000, 7000]:
+    for i in [87, 4087, 7087]:
         page_queue.put(i)
 
     thread_list = []
