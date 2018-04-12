@@ -20,23 +20,27 @@ class Speaker:
 
 class SpeakerSpider(threading.Thread):
 
-    def __init__(self, page_queue):
+    def __init__(self, page_queue, thread_name):
         threading.Thread.__init__(self)
-
+        self.thread_name = thread_name
         # 代理
         self.proxies = {
-            'http': 'http://114.67.228.126:16817',
+            'http': 'http://122.114.214.159:16817',
             # 'https': 'http://chenzhiyou0320@163.com:lwslf70d@114.215.174.49:16818'
         }
-
         self.page_queue = page_queue
         self.headers = {
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36",
             "Cache-Control": "no-cache",
-            "Connection": "keep-alive",
+            # "Connection": "keep-alive",
         }
-        self.page = 1
+        # 开始url
+        self.start_url = "https://www.emedevents.com/Speakers/viewAllSpeakers?data[headerSearchForm][search_type]=speaker"
+        # 开始页
+        self.start_page = page_queue.get()
+        print self.start_page
+        self.page = self.start_page
         self.mysql_cli = pymysql.connect(host='localhost', port=3306, database='conference', user='root', password='mysql', charset='utf8')
         self.cursor = self.mysql_cli.cursor()
 
@@ -44,48 +48,57 @@ class SpeakerSpider(threading.Thread):
 
     def run(self):
         print "开始采集"
-        while True:
-            # 队列中有数据的话一直运行
-            self.key_word = self.page_queue.get()
-            logger.error(self.key_word)
-            if not self.key_word:
-                # 队列空了, 结束运行
-                break
-            self.url = 'https://www.emedevents.com/Speakers/viewAllSpeakers?data[headerSearchForm][search_type]=speaker&data[SearchSpeaker][speaker_name]=%s' % self.key_word
-            # 开始爬取
-            self.start_spider()
+        # self.url = 'https://www.emedevents.com/Speakers/viewAllSpeakers?data[headerSearchForm][search_type]=speaker&data[SearchSpeaker][speaker_name]=%s' % self.key_word
+        # 开始爬取
+        self.start_spider()
         print "结束采集"
 
-
-
     def start_spider(self):
+
+        # 为了代码一致,所以都从第一页开始爬取
         # 获取第一页数据
-        first_page_data = self.get_first_list_page()
-        if first_page_data is None:
-            return
-        print 'get_first_page'
-        url_list = self.parse_data(first_page_data)
-        if url_list is None:
-            return
-        print url_list
-        for url in url_list:
-            # 查找人物信息
-            speaker = self.get_speaker(url)
-            # 写入数据库
-            self.save(speaker)
+        # first_page_data = self.get_first_list_page()
+        # if first_page_data is None:
+        #     return
+        # print 'get_first_page'
+        # url_list = self.parse_data(first_page_data)
+        # if url_list is None:
+        #     return
+        # # print url_list
+        # for url in url_list:
+        #     # 查找人物信息
+        #     speaker = self.get_speaker(url)
+        #     # 写入数据库
+        #     self.save(speaker)
 
         # 死循环获取其他页的信息，直到返回空列表
         while True:
 
-            # print 'get_other_page'
+            print 'get_other_page'
             other_page_data = self.get_other_list_page()
+            print 'get_data'
             # 某一页请求失败的话，直接进行下一次循环
             if other_page_data is None:
                 continue
             url_list = self.parse_data(other_page_data)
-            # 不再有人物信息，跳出循环
-            if not url_list:
-                break
+            print url_list
+            logger.error(self.thread_name + "********" + str(self.page))
+
+            # 针对三个线程,设定不同的跳出条件
+            if self.start_page == 87:
+                # 从第一页开始,到4000页结束
+                # self.page = 4000
+                if self.page >= 4000:
+                    break
+            elif self.start_page == 4087:
+                # 从第4000页开始,到7000页结束
+                if self.page >= 7087:
+                    break
+            else:
+                # 从7000页开始
+                # 不再有人物信息，跳出循环
+                if not url_list:
+                    break
             # 页码加1
             self.page += 1
             print self.page
@@ -95,7 +108,7 @@ class SpeakerSpider(threading.Thread):
                 # 写入数据库
                 if speaker:
                     self.save(speaker)
-                time.sleep(random.randint(1,5))
+                time.sleep(random.randint(1,3))
 
 
     def get_first_list_page(self):
@@ -107,7 +120,7 @@ class SpeakerSpider(threading.Thread):
             # 一次请求失败的话,多次发起请求
             times += 1
             try:
-                response = requests.get(self.url, headers=self.headers, timeout=30, proxies = self.proxies)
+                response = requests.get(self.start_url, headers=self.headers, timeout=30, proxies = self.proxies)
                 # 请求成功, 跳出循环
                 break
             except Exception as e:
@@ -122,19 +135,19 @@ class SpeakerSpider(threading.Thread):
     def get_other_list_page(self):
         # 获取其他页面的信息,第二页,第三页
         headers = self.headers
-        headers["Referer"] = self.url
+        headers["Referer"] = self.start_url
         cur_url = "https://www.emedevents.com/Speakers/viewAllSpeakers/search_speaker/%d" % self.page
 
         post_data = {
             "resultData": "",
             "page": self.page,
             "filter_type": "search_speaker",
-            "speaker_name": self.key_word,
+            "speaker_name": "",
             "speaker_speciality": "",
             "speaker_location": "",
         }
         try:
-            response = requests.post(cur_url, data=post_data, timeout = 30, proxies = self.proxies)
+            response = requests.post(cur_url, data=post_data, timeout = 30, proxies=self.proxies)
         except Exception as e:
             logger.error(e)
             return None
@@ -151,14 +164,14 @@ class SpeakerSpider(threading.Thread):
     def get_speaker(self, speaker_url):
 
         headers = self.headers
-        headers['Referer'] = self.url
+        headers['Referer'] = self.start_url
         times = 1
-        while times <4:
+        while times < 4:
             times += 1
             try:
-            # proxies = {"http": "http://" + get_proxy()}
-            # speaker_data = requests.get(url, headers=self.headers, proxies=proxies)
-                speaker_data = requests.get(speaker_url, headers=headers, proxies = self.proxies)
+                # proxies = {"http": "http://" + get_proxy()}
+                # speaker_data = requests.get(url, headers=self.headers, proxies=proxies)
+                speaker_data = requests.get(speaker_url, headers=headers)
                 break
             except Exception as e:
                 logger.error(e)
@@ -168,7 +181,6 @@ class SpeakerSpider(threading.Thread):
         # 一直没有数据的话,返回
         if not speaker_data:
             return None
-
         # 获取信息
         try:
         # 得到发言人页的信息
@@ -215,6 +227,7 @@ class SpeakerSpider(threading.Thread):
         speaker.interested = speaker_interested
         speaker.specialities = speaker_specialities
         speaker.address = address
+        # print speaker.url
         return speaker
 
 
@@ -240,18 +253,17 @@ class SpeakerSpider(threading.Thread):
 def main():
     # 队列放入数据
     page_queue = Queue()
-    file = open('./key/speaker_words')
+    # file = open('./key/speaker_words')
+    # 三个线程,分别从这三个页码开始爬取
+    for i in [87, 4087, 7087]:
+        page_queue.put(i)
+
     thread_list = []
-    while True:
-        line = file.readline().strip()
-        if not line:
-            break
-        # 将关键字信息加入队列
-        page_queue.put(line)
-    file.close()
+    thread_name_list = ["thread_1", "thread_2", "thread_3"]
+
     # 三个线程运行
     for i in range(3):
-        spider = SpeakerSpider(page_queue)
+        spider = SpeakerSpider(page_queue, thread_name_list[i])
         thread_list.append(spider)
         print spider
 
@@ -260,9 +272,6 @@ def main():
         thread.setDaemon(True)
         thread.start()
 
-    # 设置主线程结束条件
-    while not page_queue.empty():
-        pass
     # 等待线程结束
     for thread in thread_list:
         thread.join()

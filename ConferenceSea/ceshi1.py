@@ -40,9 +40,31 @@ import time
 import random
 import re
 from Queue import Queue
+# coding=utf-8
+User_Agent = ["Mozilla/5.0(Macintosh;U;IntelMacOSX10_6_8;en-us)AppleWebKit/534.50(KHTML,likeGecko)Version/5.1Safari/534.50",
+"User-Agent:Mozilla/5.0(Windows;U;WindowsNT6.1;en-us)AppleWebKit/534.50(KHTML,likeGecko)Version/5.1Safari/534.50",
+"Mozilla/5.0(compatible;MSIE9.0;WindowsNT6.1;Trident/5.0",
+"Mozilla/4.0(compatible;MSIE8.0;WindowsNT6.0;Trident/4.0)",
+"Mozilla/4.0(compatible;MSIE7.0;WindowsNT6.0)",
+"Mozilla/4.0(compatible;MSIE6.0;WindowsNT5.1)",
+"Mozilla/5.0(Macintosh;IntelMacOSX10.6;rv:2.0.1)Gecko/20100101Firefox/4.0.1",
+"Mozilla/5.0(WindowsNT6.1;rv:2.0.1)Gecko/20100101Firefox/4.0.1",
+"Opera/9.80(Macintosh;IntelMacOSX10.6.8;U;en)Presto/2.8.131Version/11.11",
+"Opera/9.80(WindowsNT6.1;U;en)Presto/2.8.131Version/11.11",
+"Mozilla/5.0(Macintosh;IntelMacOSX10_7_0)AppleWebKit/535.11(KHTML,likeGecko)Chrome/17.0.963.56Safari/535.11",
+"Mozilla/4.0(compatible;MSIE7.0;WindowsNT5.1;Maxthon2.0)",
+"Mozilla/4.0(compatible;MSIE7.0;WindowsNT5.1;TencentTraveler4.0)",
+"Mozilla/4.0(compatible;MSIE7.0;WindowsNT5.1)",
+"Mozilla/4.0(compatible;MSIE7.0;WindowsNT5.1;TheWorld)",
+"Mozilla/4.0(compatible;MSIE7.0;WindowsNT5.1;Trident/4.0;SE2.XMetaSr1.0;SE2.XMetaSr1.0;.NETCLR2.0.50727;SE2.XMetaSr1.0)",
+"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360SE",
+"Mozilla/4.0(compatible;MSIE7.0;WindowsNT5.1;AvantBrowser)",
+"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+]
+
 class SpeakerSpider:
 
-    def __init__(self, keywords):
+    def __init__(self):
         # threading.Thread.__init__(self)
 
         # 代理
@@ -51,14 +73,19 @@ class SpeakerSpider:
         #     # 'https': 'http://chenzhiyou0320@163.com:lwslf70d@114.215.174.49:16818'
         # }
 
-        self.key_word = keywords
+        # self.key_word = keywords
         self.headers = {
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36",
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
         }
+
         self.page = 100
+
+        self.start_url = "https://www.emedevents.com/Speakers/viewAllSpeakers?data[headerSearchForm][search_type]=speaker"
+        self.page = 8000
+
         # self.mysql_cli = pymysql.connect(host='localhost', port=3306, database='conference', user='root', password='mysql', charset='utf8')
         # self.cursor = self.mysql_cli.cursor()
 
@@ -66,16 +93,16 @@ class SpeakerSpider:
 
     def run(self):
         print "开始采集"
-        while True:
+        # while True:
             # 队列中有数据的话一直运行
             # self.key_word = self.page_queue.get()
-            logger.error(self.key_word)
-            if not self.key_word:
+            # logger.error(self.key_word)
+            # if not self.key_word:
                 # 队列空了, 结束运行
-                break
-            self.url = 'https://www.emedevents.com/Speakers/viewAllSpeakers?data[headerSearchForm][search_type]=speaker&data[SearchSpeaker][speaker_name]=%s' % self.key_word
+                # break
+            # self.url = 'https://www.emedevents.com/Speakers/viewAllSpeakers?data[headerSearchForm][search_type]=speaker&data[SearchSpeaker][speaker_name]=%s' % self.key_word
             # 开始爬取
-            self.start_spider()
+        self.start_spider()
         print "结束采集"
 
 
@@ -86,13 +113,13 @@ class SpeakerSpider:
         if first_page_data is None:
             return
         print 'get_first_page'
-        url_list = self.parse_data(first_page_data)
-        if url_list is None:
-            return
-        print url_list
-        for url in url_list:
-            # 查找人物信息
-            speaker = self.get_speaker(url)
+        # url_list = self.parse_data(first_page_data)
+        # if url_list is None:
+        #     return
+        # print url_list
+        # for url in url_list:
+        #     # 查找人物信息
+        #     speaker = self.get_speaker(url)
             # 写入数据库
             # self.save(speaker)
 
@@ -123,13 +150,14 @@ class SpeakerSpider:
     def get_first_list_page(self):
         headers = self.headers
         headers["Referer"] = "https://www.emedevents.com/"
+        headers["User-Agent"] = random.choice(User_Agent)
         # 获取列表页(第一页)
         times = 1
         while times < 4:
             # 一次请求失败的话,多次发起请求
             times += 1
             try:
-                response = requests.get(self.url, headers=self.headers, timeout=30)
+                response = requests.get(self.start_url, headers=self.headers, timeout=30)
                 # 请求成功, 跳出循环
                 break
             except Exception as e:
@@ -144,14 +172,15 @@ class SpeakerSpider:
     def get_other_list_page(self):
         # 获取其他页面的信息,第二页,第三页
         headers = self.headers
-        headers["Referer"] = self.url
+        headers["Referer"] = self.start_url
+        # https: // www.emedevents.com / Speakers / viewAllSpeakers / search_speaker / 3
         cur_url = "https://www.emedevents.com/Speakers/viewAllSpeakers/search_speaker/%d" % self.page
 
         post_data = {
             "resultData": "",
             "page": self.page,
             "filter_type": "search_speaker",
-            "speaker_name": self.key_word,
+            "speaker_name": "",
             "speaker_speciality": "",
             "speaker_location": "",
         }
@@ -173,7 +202,7 @@ class SpeakerSpider:
     def get_speaker(self, speaker_url):
 
         headers = self.headers
-        headers['Referer'] = self.url
+        headers['Referer'] = self.start_url
         times = 1
         while times <4:
             times += 1
@@ -256,5 +285,5 @@ class SpeakerSpider:
     #         logger.error(e)
     #         logger.error('保存人物信息失败')
 
-gain_speaker = SpeakerSpider("L")
+gain_speaker = SpeakerSpider()
 gain_speaker.run()

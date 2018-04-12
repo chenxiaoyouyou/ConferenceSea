@@ -25,7 +25,7 @@ create table speakers(
 	position varchar(100),
 	address VARCHAR(100),
 	specialties varchar(300),
-	interested varchar(300)
+	interested varchar(500)
 )engine=innodb;
 
 
