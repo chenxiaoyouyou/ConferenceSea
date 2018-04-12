@@ -88,6 +88,7 @@ class SpeakerSpider(threading.Thread):
                 break
             # 页码加1
             self.page += 1
+            print self.page
             for url in url_list:
                 # 查找人物信息
                 speaker = self.get_speaker(url)

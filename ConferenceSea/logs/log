@@ -4756,3 +4756,314 @@ ERROR ceshi1.py : 72  A
 ERROR ceshi1.py : 72  L 
 ERROR ceshi1.py : 229  'utf8' codec can't decode byte 0x92 in position 95: invalid start byte 
 ERROR ceshi1.py : 230  发言人信息读取失败 
+ERROR ceshi1.py : 72  L 
+ERROR ceshi1.py : 229  'utf8' codec can't decode byte 0x96 in position 43: invalid start byte 
+ERROR ceshi1.py : 230  发言人信息读取失败 
+ERROR gain_speakers.py : 50  X 
+ERROR gain_speakers.py : 50  C 
+ERROR gain_speakers.py : 50  V 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-v-s-choudary-57161' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'connell', ' Santa Rosa, California', 'Assistant Clinical Professor ', 'Family Me' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  'NoneType' object has no attribute 'url' 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 50  B 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'name' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'interested' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'name' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's disease,  vulva Crohn's disease,  Inflammatory Bowel Disease,  IBD,  Fecal Mic' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'name' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'interested' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/m-v-preethi-51685' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'interested' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/n-v-sivarama-krishna-' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/c-v-gosta-ullmark-459' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0xa0 in position 24: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/s-v-suresh-kumar-6367' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'name' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-lohith-b-m-61182' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/p-s-b-hussain-62469' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0x93 in position 20: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Disease,  Biological Sciences,  Cerebral Blood Vessels,  Pathogenesis,  Neurol' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's health')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/adrian-v-s-hill-43569' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-v-a-malipatil-5143' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's health;Office-based procedures')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/michael-b-ishitani-10' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-b-r-ramasubramania' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/b-s-ayyappan-117720' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0xa0 in position 24: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/sunil-kumar-v-s-57798' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0x92 in position 459: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-b-s-sohota-108072' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/faith-c-m-mcnicholas-' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/d-v-ramana-62379' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/heather-c-s-chenette-' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'amico', ' Boston, Massachusetts', 'Chief, Professor ', 'Radiation Oncology', 'Ra' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-a-ramarao-87567' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-d-v-prasad-107427' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Disease,  Hospice Care,  Lung Cancer,  Lymphoma,  Pancreatic Cancer TX,  Prost' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's disease,  Gastrointestinal Diseases')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Macroglobulinemia,  Immunobiology')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's disease and ulcerative colitis.')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's disease and ulcerative colitis); Diagnosis and disease activity assessment of ' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-r-c-sharma-109572' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/c-v-brahmanandam-1177' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's syndrome,  stress test,  Valve Disease')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0x92 in position 130: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/c-venkata-s-ram-21932' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-suman-n-v-60872' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Sarcoma,  Soft Tissue Sarcoma,  Clinical Research,  Clinical Trails,  Clinical' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/narasimha-prasad-n-v-' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/stephanie-c-s-wu-2947' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Disease,  Dementia,  Geriatric Neurology,  Neurodegenerative Diseases')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-b-n-ravindra-60903' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/sathyapal-m-b-61406' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/s-b-gupta-61824' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/b-s-venkatesh-62322' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'interested' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/rari-chandran-b-m-639' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Disease,  Orbital Fracture,  Orbital Tumor,  Thyroid Eye Disease,  Ambulatory Su' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-ravish-v-n-108878' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-v-chandram-auleesw' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-v-shanmugaraja-110' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/john-v-vanore-137738' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/carlos-v-brown-161489' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/joanne-v-hickey-58909' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/roger-v-ostrander-620' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/jeffrey-v-matous-6370' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/james-v-rawson-673439' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/igor-v-reshetov-70536' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/m-v-padma-srivastava-' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/mitchell-s-v-elkind-1' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0x92 in position 338: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's disease,  Schizophrenia,  Neural development,  Dopamine receptor,  Arrestin,  ' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0x96 in position 46: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0x96 in position 86: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Disease,')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'interested' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-b-n-prasad-107420' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-anand-b-mishra-108' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'name' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-deshmukh-b-110098' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-s-b-gupta-110531' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-b-kanthimathi-1107' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-v-s-ajithkumar-608' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-s-c-ashoka-57496' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-suman-c-p-s-59353' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/n-c-kothari-61699' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/s-c-gaur-61860' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Disease,  Hyperprolactinemia,  Prolactinomas,  Neuroendocrine Disorders,  Hypo' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Esophagus,  Enteral Nutrition,  Esophageal Diseases,  GI Motility,  Gastroesop' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/n-c-gupta-65069' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0xa0 in position 17: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Health,  Medical Education,  Healthcare Management,  Clinical Research')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/anthony-v-d-amico-958' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Cardiovascular Medicine Program ', '', 'CARDIOVASCULAR SYMPOSIUM,  Cardiovascu' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'interested' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Syndrome,  Chronic Graft-Versus-Host Disease,  Acute Graft-Versus-Host Disease' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'interested' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0x92 in position 43: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/b-s-v-prasad-50212' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-d-krishnaram-50894' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dabre-v-n-51164' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-m-d-namboodiri-5152' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-s-poornananda-bashy' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/b-v-raja-rao-54043' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-s-subbarao-ryali-54' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-r-sridhar-54620' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/zubair-m-b-mohammed-5' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/sreeraj-v-s-55091' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-s-ravindranath-5548' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/valsala-d-b-s-54927' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/kama-reddy-s-b-57243' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-n-v-kamat-56190' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/c-r-tim-talbert-94924' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/b-m-singh-63067' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Disease')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-s-n-raju-62419' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-k-c-reddy-62750' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Imaging,  Radiotherapy')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Cardiovascular Disease,  Internal Medicine and General Medicine,  Coronary dis' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 207  'utf8' codec can't decode byte 0xa0 in position 20: invalid start byte 
+ERROR gain_speakers.py : 208  发言人信息读取失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/spencer-c-behr-106482' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-c-sanjeevaiah-1074' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-k-c-malyadri-10753' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-a-c-bardaloi-10763' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-c-s-vikraman-10922' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-c-manickasundaram-' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Disease,  Medical Education')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/christopher-c-broder-' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-m-v-gopinath-10825' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'interested' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/t-v-devarajan-117751' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'carroll', ' Scottsdale, Arizona', 'Director, Assistant Professor ', 'Neurology',' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's diseasel;Metabolic tests for liver dysfunction')' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/c-s-pramesh-263473' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Health,  Medical Research,  Translational Medicine,  Metabolic Syndrome,  Hear' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Health,  Chronic Illness,  Epidemiology,  International Health,  Medical Educa' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/v-s-abhilash-kumar-s-' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/m-s-v-k-raju-53176' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-shashi-kanth-v-s-6' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-nanda-kumar-s-v-60' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-shiv-sandeep-s-v-6' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1406, u"Data too long for column 'name' at row 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/p-s-v-n-sharma-53705' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/hayley-b-gershengorn-' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/c-f-ward-571770' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/robert-b-campbell-163' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/dr-prasad-b-s-v-61051' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/beth-b-emrick-165836' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/cheryl-b-beighle-1663' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1064, u"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's Health,  Sigma Theta Tau International,   Nursing Education,  Neonatal-Pediatr' at line 1") 
+ERROR gain_speakers.py : 234  保存人物信息失败 
+ERROR gain_speakers.py : 233  (1062, u"Duplicate entry 'https://www.emedevents.com/speaker-profile/donald-b-kohn-188744' for key 'url'") 
+ERROR gain_speakers.py : 234  保存人物信息失败 

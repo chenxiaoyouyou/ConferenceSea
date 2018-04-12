@@ -58,7 +58,7 @@ class SpeakerSpider:
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
         }
-        self.page = 1
+        self.page = 100
         # self.mysql_cli = pymysql.connect(host='localhost', port=3306, database='conference', user='root', password='mysql', charset='utf8')
         # self.cursor = self.mysql_cli.cursor()
 
