@@ -129,7 +129,7 @@ def main():
     """
     page_queue = Queue()
 
-    file = open('./key/key_words1')
+    file = open('./key/meeting_words')
     while True:
         line = file.readline()
         if not line:

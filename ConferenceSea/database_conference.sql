@@ -23,8 +23,9 @@ create table speakers(
 	name varchar(30) not null,
 	url varchar(100) unique not null,
 	position varchar(100),
-	specialties varchar(100),
-	interested varchar(200)
+	address VARCHAR(100),
+	specialties varchar(300),
+	interested varchar(300)
 )engine=innodb;
 
 

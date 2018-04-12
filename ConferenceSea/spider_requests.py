@@ -8,6 +8,7 @@ from config import logger
 import time
 import random
 import Queue
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 class UrlSpider(threading.Thread):
     def __init__(self, q):
@@ -81,6 +82,7 @@ class UrlSpider(threading.Thread):
         while 1<4:
             i += 1
             try:
+                requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
                 response = requests.get(self.url, headers=self.headers, proxies=self.proxies,verify=False)
                 break
             except Exception as e:
@@ -186,7 +188,7 @@ class UrlSpider(threading.Thread):
 
 def main():
     page_queue = Queue.Queue()
-    file = open('./key/key_words1')
+    file = open('./key/meeting_words')
     while True:
         line = file.readline()
         if not line:
