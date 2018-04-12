@@ -1,38 +1,22 @@
-#coding=utf-8
-import pymysql
-mysql_cli = pymysql.connect(host='192.168.204.140', port=3306, database='conference', user='root', password='mysql',
-                                 charset='utf8')
+# coding=utf-8
+# https://www.emedevents.com/view-all
+import requests
+from lxml import etree
+data = {
+    "orgSpeakersData":"ok",
+    "spr_type":"organizer_speaker",
+    "organizer_id":5997,
+    "conftype":"Speaking At Organizer's Conferences"
+}
+url = "https://www.emedevents.com/view-all"
 
-paras = ['title', 'current_url', '1990-03-20', '1990-03-20', 'area', 'organizer', 'specialities']
-cursor = mysql_cli.cursor()
-# a = cursor.execute('insert into conference (title, url, start_date, end_date, area, organized, specialties) VALUES (%s, %s, %s, %s, %s, %s, %s)', paras)
-# mysql_cli.commit()
-paras2 = ['current_url',]
-cursor.execute('select id from conference where id=10')
-print cursor.fetchall()
-
-# print a
-
-# import requests
-# from lxml import etree
-# import random
-#
-# a = []
-#
-#
-# # 获取代理
-# def get_proxy():
-#     """从块代理首页获取代理并从中加入列表"""
-#     while True:
-#         # 快代理
-#         url = 'https://www.kuaidaili.com/free/'
-#         content = requests.get(url)
-#         selector = etree.HTML(content.text)
-#         ip = selector.xpath('//tr/td[1]/text()')
-#         port = selector.xpath('//tr/td[2]/text()')
-#         for i in range(len(ip)):
-#             a.append(ip[i] + ':' + port[i])
-#         print a
-#         break
-# get_proxy()
-# print random.choice(a)
+headers = {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                        'Accept - Encoding': 'gzip',
+                        'Cache-Control': 'no-cache',
+                        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+                        'Connection': 'keep-alive',
+                        }
+data = requests.post(url, data=data, headers= headers).content
+se = etree.HTML(data)
+li = se.xpath('//div[@class="ellips-wrapper"]/a/@href')
+print li
