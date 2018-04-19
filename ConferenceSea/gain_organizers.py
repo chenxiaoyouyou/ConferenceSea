@@ -301,8 +301,9 @@ class OrganizerSpider:
 
 
     def __del__(self):
-        self.mysql_cli.close()
         self.cursor.close()
+        self.mysql_cli.close()
+
 
 if __name__ == "__main__":
     orgaspider = OrganizerSpider()
