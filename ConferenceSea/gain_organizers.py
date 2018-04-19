@@ -162,8 +162,6 @@ class OrganizerSpider:
         # 返回对象
         return organizer
 
-
-
     def save_data(self, data):
         pass
 
