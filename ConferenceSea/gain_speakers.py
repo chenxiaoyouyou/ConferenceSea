@@ -86,12 +86,12 @@ class SpeakerSpider(threading.Thread):
             logger.error(self.thread_name + "********" + str(self.page))
             print self.page
             # 针对三个线程,设定不同的跳出条件
-            if self.start_page == 3500:
+            if self.start_page == 200:
                 # 从第一页开始,到4000页结束
                 # self.page = 4000
                 if self.page >= 4000:
                     break
-            elif self.start_page == 6500:
+            elif self.start_page == 4200:
                 # 从第4000页开始,到7000页结束
                 if self.page >= 7000:
                     break
@@ -255,7 +255,7 @@ def main():
     page_queue = Queue()
     # file = open('./key/speaker_words')
     # 三个线程,分别从这三个页码开始爬取
-    for i in [3505, 6505, 9800]:
+    for i in [200, 4200, 7300]:
         page_queue.put(i)
 
     thread_list = []
