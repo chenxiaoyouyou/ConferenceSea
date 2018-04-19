@@ -81,18 +81,19 @@ class SpeakerSpider(threading.Thread):
             if other_page_data is None:
                 continue
             url_list = self.parse_data(other_page_data)
+
             print url_list
             logger.error(self.thread_name + "********" + str(self.page))
-
+            print self.page
             # 针对三个线程,设定不同的跳出条件
-            if self.start_page == 87:
+            if self.start_page == 3500:
                 # 从第一页开始,到4000页结束
                 # self.page = 4000
                 if self.page >= 4000:
                     break
-            elif self.start_page == 4087:
+            elif self.start_page == 6500:
                 # 从第4000页开始,到7000页结束
-                if self.page >= 7087:
+                if self.page >= 7000:
                     break
             else:
                 # 从7000页开始
@@ -101,14 +102,14 @@ class SpeakerSpider(threading.Thread):
                     break
             # 页码加1
             self.page += 1
-            print self.page
+            logger.error(self.page)
             for url in url_list:
                 # 查找人物信息
                 speaker = self.get_speaker(url)
                 # 写入数据库
                 if speaker:
                     self.save(speaker)
-                time.sleep(random.randint(1,3))
+                time.sleep(1)
 
 
     def get_first_list_page(self):
@@ -120,7 +121,7 @@ class SpeakerSpider(threading.Thread):
             # 一次请求失败的话,多次发起请求
             times += 1
             try:
-                response = requests.get(self.start_url, headers=self.headers, timeout=30, proxies = self.proxies)
+                response = requests.get(self.start_url, headers=self.headers, timeout=30)
                 # 请求成功, 跳出循环
                 break
             except Exception as e:
@@ -147,7 +148,7 @@ class SpeakerSpider(threading.Thread):
             "speaker_location": "",
         }
         try:
-            response = requests.post(cur_url, data=post_data, timeout = 30, proxies=self.proxies)
+            response = requests.post(cur_url, data=post_data, timeout = 30)
         except Exception as e:
             logger.error(e)
             return None
@@ -233,7 +234,6 @@ class SpeakerSpider(threading.Thread):
 
     def save(self, speaker):
         # 将数据保存至mysql数据库
-        cursor = self.mysql_cli.cursor()
         try:
             sql = """insert into speakers(url, name, address, position, specialties, interested) VALUES ('%s', '%s', '%s', '%s', '%s', '%s')""" % (speaker.url, speaker.name,
                                                                                    speaker.address, speaker.position, speaker.specialities, speaker.interested)
@@ -255,7 +255,7 @@ def main():
     page_queue = Queue()
     # file = open('./key/speaker_words')
     # 三个线程,分别从这三个页码开始爬取
-    for i in [87, 4087, 7087]:
+    for i in [3505, 6505, 9800]:
         page_queue.put(i)
 
     thread_list = []
@@ -269,7 +269,7 @@ def main():
 
     # 设置为守护线程
     for thread in thread_list:
-        thread.setDaemon(True)
+        # thread.setDaemon(True)
         thread.start()
 
     # 等待线程结束

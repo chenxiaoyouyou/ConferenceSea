@@ -2,7 +2,7 @@ create database conference_sea charset=utf8;
 
 CREATE table organizers(
 	id int UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
-	url VARCHAR(100) UNIQUE NOT NULL,
+	url VARCHAR(200) UNIQUE NOT NULL,
 	name VARCHAR(200) DEFAULT '',
 	organizer_id INT NOT NULL DEFAULT 0,
 	address VARCHAR(200) DEFAULT '',
