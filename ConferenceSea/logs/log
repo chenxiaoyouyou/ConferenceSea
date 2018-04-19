@@ -1,0 +1,74 @@
+ERROR gain_meetings.py : 236  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 237  保存会议失败 
+ERROR gain_meetings.py : 236  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 237  保存会议失败 
+ERROR gain_meetings.py : 236  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 237  保存会议失败 
+ERROR gain_meetings.py : 236  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 237  保存会议失败 
+ERROR gain_meetings.py : 236  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 237  保存会议失败 
+ERROR gain_meetings.py : 236  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 237  保存会议失败 
+ERROR gain_meetings.py : 236  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 237  保存会议失败 
+ERROR gain_meetings.py : 236  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 237  保存会议失败 
+ERROR gain_meetings.py : 236  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 237  保存会议失败 
+ERROR gain_meetings.py : 235  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 236  保存会议失败 
+ERROR gain_meetings.py : 235  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 236  保存会议失败 
+ERROR gain_meetings.py : 235  'NoneType' object has no attribute '__getitem__' 
+ERROR gain_meetings.py : 236  保存会议失败 
+ERROR gain_meetings.py : 239  %d format: a number is required, not NoneType 
+ERROR gain_meetings.py : 240  保存会议失败 
+ERROR gain_meetings.py : 239  %d format: a number is required, not NoneType 
+ERROR gain_meetings.py : 240  保存会议失败 
+ERROR gain_meetings.py : 239  %d format: a number is required, not NoneType 
+ERROR gain_meetings.py : 240  保存会议失败 
+ERROR gain_meetings.py : 239  (1452, u'Cannot add or update a child row: a foreign key constraint fails (`conference`.`conferences`, CONSTRAINT `conferences_ibfk_1` FOREIGN KEY (`organizer_id`) REFERENCES `organizers` (`id`))') 
+ERROR gain_meetings.py : 240  保存会议失败 
+ERROR gain_meetings.py : 239  (1452, u'Cannot add or update a child row: a foreign key constraint fails (`conference`.`conferences`, CONSTRAINT `conferences_ibfk_1` FOREIGN KEY (`organizer_id`) REFERENCES `organizers` (`id`))') 
+ERROR gain_meetings.py : 240  保存会议失败 
+ERROR gain_meetings.py : 239  (1452, u'Cannot add or update a child row: a foreign key constraint fails (`conference`.`conferences`, CONSTRAINT `conferences_ibfk_1` FOREIGN KEY (`organizer_id`) REFERENCES `organizers` (`id`))') 
+ERROR gain_meetings.py : 240  保存会议失败 
+ERROR gain_meetings.py : 243  (1146, u"Table 'conference.conference' doesn't exist") 
+ERROR gain_meetings.py : 244  保存会议失败 
+ERROR gain_meetings.py : 243  (1146, u"Table 'conference.conference' doesn't exist") 
+ERROR gain_meetings.py : 244  保存会议失败 
+ERROR gain_meetings.py : 243  (1146, u"Table 'conference.conference' doesn't exist") 
+ERROR gain_meetings.py : 244  保存会议失败 
+ERROR gain_meetings.py : 243  (1062, u"Duplicate entry 'https://www.emedevents.com/c/medical-conferences-2018/ethical-pr' for key 'url'") 
+ERROR gain_meetings.py : 244  保存会议失败 
+ERROR gain_meetings.py : 243  (1062, u"Duplicate entry 'https://www.emedevents.com/c/medical-conferences-2018/ethical-pr' for key 'url'") 
+ERROR gain_meetings.py : 244  保存会议失败 
+ERROR gain_meetings.py : 244  (1062, u"Duplicate entry 'https://www.emedevents.com/c/medical-conferences-2018/ethical-pr' for key 'url'") 
+ERROR gain_meetings.py : 245  保存会议失败 
+ERROR gain_meetings.py : 244  (1062, u"Duplicate entry 'https://www.emedevents.com/c/medical-conferences-2018/ethical-pr' for key 'url'") 
+ERROR gain_meetings.py : 245  保存会议失败 
+ERROR gain_meetings.py : 244  (1062, u"Duplicate entry 'https://www.emedevents.com/c/medical-conferences-2018/ethical-pr' for key 'url'") 
+ERROR gain_meetings.py : 245  保存会议失败 
+ERROR gain_meetings.py : 246  (1062, u"Duplicate entry 'https://www.emedevents.com/c/medical-conferences-2018/ethical-pr' for key 'url'") 
+ERROR gain_meetings.py : 247  保存会议失败 
+ERROR gain_meetings.py : 246  (1062, u"Duplicate entry 'https://www.emedevents.com/c/medical-conferences-2018/ethical-pr' for key 'url'") 
+ERROR gain_meetings.py : 247  保存会议失败 
+ERROR gain_meetings.py : 246  (1062, u"Duplicate entry 'https://www.emedevents.com/c/medical-conferences-2018/ethical-pr' for key 'url'") 
+ERROR gain_meetings.py : 247  保存会议失败 
+ERROR gain_meetings.py : 246  (1062, u"Duplicate entry 'https://www.emedevents.com/c/medical-conferences-2018/principles' for key 'url'") 
+ERROR gain_meetings.py : 247  保存会议失败 
+ERROR gain_meetings.py : 246  (1062, u"Duplicate entry 'https://www.emedevents.com/c/medical-conferences-2018/principles' for key 'url'") 
+ERROR gain_meetings.py : 247  保存会议失败 
+ERROR gain_meetings.py : 277  (1146, u"Table 'conference.conferences_speakers' doesn't exist") 
+ERROR gain_meetings.py : 278  查询人物, 写入人-会关系失败 
+ERROR gain_meetings.py : 277  (1146, u"Table 'conference.conferences_speakers' doesn't exist") 
+ERROR gain_meetings.py : 278  查询人物, 写入人-会关系失败 
+ERROR gain_meetings.py : 277  (1146, u"Table 'conference.conferences_speakers' doesn't exist") 
+ERROR gain_meetings.py : 278  查询人物, 写入人-会关系失败 
+ERROR gain_meetings.py : 277  (1146, u"Table 'conference.conferences_speakers' doesn't exist") 
+ERROR gain_meetings.py : 278  查询人物, 写入人-会关系失败 
+ERROR gain_meetings.py : 277  (1146, u"Table 'conference.conferences_speakers' doesn't exist") 
+ERROR gain_meetings.py : 278  查询人物, 写入人-会关系失败 
+ERROR gain_meetings.py : 277  (1146, u"Table 'conference.conferences_speakers' doesn't exist") 
+ERROR gain_meetings.py : 278  查询人物, 写入人-会关系失败 
