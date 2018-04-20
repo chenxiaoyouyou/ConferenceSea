@@ -232,7 +232,6 @@ class OrganizerSpider:
 
 
 
-
     def gain_speaker_list(self, response):
         selector = etree.HTML(response.content)
         speaker_url_list = selector.xpath('//div[@class="ellips-wrapper"]/a/h3/../@href')
@@ -284,7 +283,6 @@ class OrganizerSpider:
                 logger.error(e)
                 logger.error("保存关系失败")
                 print "保存关系失败"
-
 
     def save_data(self, organizer):
         sql = """insert into organizers (url, name, organizer_id, address, summary) VALUES ('%s', '%s', %s, '%s', '%s')""" %(
