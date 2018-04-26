@@ -11,12 +11,12 @@ CREATE table organizers(
 # 组织为1, 会议为多
 create table conferences (
 	id int unsigned not null auto_increment primary key,
-	title varchar(200) not null,
-	url varchar(200) not null unique,
+	title varchar(300) not null,
+	url varchar(300) not null unique,
 	start_date date,
 	end_date date,
-	area varchar(100),
-	specialties varchar(200),
+	area varchar(200),
+	specialties varchar(300),
 	organizer varchar(200),
 	organizer_id INT UNSIGNED,
 	FOREIGN KEY (organizer_id) REFERENCES organizers(id)

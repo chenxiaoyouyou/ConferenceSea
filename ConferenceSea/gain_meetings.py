@@ -37,15 +37,16 @@ class GainDetailInfoThread(threading.Thread):
         # 创建一个redis链接
         self.redis_cli = redis.StrictRedis(host='localhost', port=6379, db=7)
         # 创建一个mysql链接
-        self.mysql_cli = pymysql.connect(host='192.168.204.140', port=3306, database='conference', user='root', password='mysql', charset='utf8')
+        self.mysql_cli = pymysql.connect(host='localhost', port=3306, database='conference', user='root', password='mysql', charset='utf8')
         self.cursor = self.mysql_cli.cursor()
         self.thread_name = thread_name
 
 
     def run(self):
-        print self.thread_name + '开始爬取'
+        if self.thread_name:
+            print self.thread_name + '开始爬取'
         self.gain_info()
-        print '结束爬取'
+        print self.thread_name  + '结束爬取'
 
     def gain_info(self):
         """
@@ -53,28 +54,22 @@ class GainDetailInfoThread(threading.Thread):
         :return:
         """
         # 无限循环从redis中获取数据
-        # i = 1
-        # while True:
-        #     print i
-        #     i += 1
-        #
-        #     try:
-        #
-        #         # url = self.redis_cli.spop('2017_urls')
-        #     except Exception as e:
-        #         logger.error(e)
-        #         logger.error('从redis中取数据出错')
-        #     if not url:
-        #         break
-            # 多次尝试打开一个网页,打开就直接跳出,打开失败尝试再次打开
-        url = "https://www.emedevents.com/c/medical-conferences-2018/principles-of-medical-education-maximizing-your-teaching-skills-3"
-        # 实验刚开始
         i = 1
         while True:
+            print i
             i += 1
-            if i > 2:
-                break
 
+            try:
+
+                url = self.redis_cli.spop('backup_urls1')
+                print url
+            except Exception as e:
+                logger.error(e)
+                logger.error('从redis中取数据出错')
+            if not url:
+                break
+            # 多次尝试打开一个网页,打开就直接跳出,打开失败尝试再次打开
+        # 实验刚开始
             times = 4
             html_selector = None
             while times > 0:
@@ -85,74 +80,92 @@ class GainDetailInfoThread(threading.Thread):
                     requests.get("http://example.org", proxies=proxies)
                     """
 
-                    content = requests.get(url, headers=self.headers)
+                    content = requests.get(url, headers=self.headers, timeout=10)
                     # 获取数据
                     html_selector = etree.HTML(content.text)
+                    print "获取详情页"
                     break
                 except Exception as e:
                     logger.error(e)
                     logger.error('打开网页失败')
-            if len(content.text) == 0:
-                return
+            # if len(content.text) == 0:
+            #     return
+            if not html_selector:
+                continue
 
             # 存在网页数据, 从中取出需要的数据
             # 链接地址
             current_url = url
             # 会议标题
-            title = html_selector.xpath('//h1/text()')[0]
-            # 获取会议的开始日期和结束日期
-            date_str = html_selector.xpath('//div[@class="date"]/text()')[0]
-            # 获取日期字符串
-            date_str = date_str.replace(',', ' ').replace('|', ' ').replace('\t', '').strip()
-            date_str = re.match(r'([^ ]+) ([\d]{1,2}) - ([a-zA-Z]{3})?.*?([\d]{1,2}).*?([\d]{4})', date_str)
-            month1 = date_str.group(1)
-            start_day = date_str.group(2)
-            month2 = date_str.group(3)
-            end_day = date_str.group(4)
-            year = date_str.group(5)
-            # 月份字典,用于将英文月份转化为数字字符串
-            Month = {
-                'Jan': '01',
-                'Feb': '02',
-                'Mar': '03',
-                'Apr': '04',
-                'May': '05',
-                'Jun': '06',
-                'Jul': '07',
-                'Aug': '08',
-                'Sep': '09',
-                'Oct': '10',
-                'Nov': '11',
-                'Dec': '12'
-            }
-            # 开始日期和结束日期,格式为'1990-03-20'
-            if not month2:
-                start_date = year + '-' + Month.get(month1) + '-' + start_day
-                end_date = year + '-' + Month.get(month1) + '-' + end_day
-            else:
-                start_date = year + '-' + Month.get(month1) + '-' + start_day
-                end_date = year + '-' + Month.get(month2) + '-' + end_day
+            try:
+                title = html_selector.xpath('//h1/text()')[0]
+                title = title.replace("'", "\\\'").replace('"', '\\\"')
+                # 获取会议的开始日期和结束日期
+                date_str = html_selector.xpath('//div[@class="date"]/text()')
+                if date_str:
+                    date_str = date_str[0]
+                # 获取日期字符串
+                date_str = date_str.replace(',', ' ').replace('|', ' ').replace('\t', '').strip()
+                date_str = re.match(r'([^ ]+) ([\d]{1,2}) - ([a-zA-Z]{3})?.*?([\d]{1,2}).*?([\d]{4})', date_str)
+                if date_str:
+                    month1 = date_str.group(1)
+                    start_day = date_str.group(2)
+                    month2 = date_str.group(3)
+                    end_day = date_str.group(4)
+                    year = date_str.group(5)
+                # 月份字典,用于将英文月份转化为数字字符串
+                else:
+                    date_str = "null"
+                Month = {
+                    'Jan': '01',
+                    'Feb': '02',
+                    'Mar': '03',
+                    'Apr': '04',
+                    'May': '05',
+                    'Jun': '06',
+                    'Jul': '07',
+                    'Aug': '08',
+                    'Sep': '09',
+                    'Oct': '10',
+                    'Nov': '11',
+                    'Dec': '12'
+                }
+                # 开始日期和结束日期,格式为'1990-03-20'
+                if not month2:
+                    start_date = year + '-' + Month.get(month1) + '-' + start_day
+                    end_date = year + '-' + Month.get(month1) + '-' + end_day
+                else:
+                    start_date = year + '-' + Month.get(month1) + '-' + start_day
+                    end_date = year + '-' + Month.get(month2) + '-' + end_day
 
-            print start_date
-            print end_date
-            # 获取会议举行的地区,(列表)
-            area = html_selector.xpath('//div[@class="date"]/a/text()')
-            # 地区
-            area = area[0] + ',' + area[1]
-            print area
-            # 组织机构
-            organizer = html_selector.xpath('//div[@class="speakers marT10"]/span/a/text()')[0]
-            organizer_url = html_selector.xpath('//div[@class="speakers marT10"]/span/a/@href')[0]
-            print organizer_url
-            # 学科, 可能有多个学科
-            specialties_list = html_selector.xpath('//div[@class="speakers"]/span/a/text()')
+                # 获取会议举行的地区,(列表)
+                area = html_selector.xpath('//div[@class="date"]/a/text()')
+                if area:
+                    # 地区
+                    if len(area)==1:
+                        area = area[0]
+                    else:
+                        area = area[0] + ',' + area[1]
+                else:
+                    area = "null"
+                # 组织机构
+                print area+ "*****************"
+                organizer = html_selector.xpath('//div[@class="speakers marT10"]/span/a/text()')
+                if organizer:
+                    organizer = organizer[0]
+                    organizer_url = html_selector.xpath('//div[@class="speakers marT10"]/span/a/@href')[0]
+                # 学科, 可能有多个学科
+                specialties_list = html_selector.xpath('//div[@class="speakers"]/span/a/text()')
+            except Exception as e:
+                logger.error(e)
+                logger.error("提取信息错误")
+                continue
             specialities = ''
             # 可采用模糊查询得到结果
             for spe in specialties_list:
                 specialities += (spe + ',')
             # 最终学科字符串
             specialities = specialities.strip(',')
-            print specialities
             # 获取发言人信息
             # speakers_list = html_selector.xpath('//h5/a/text()')
             meeting = Meeting()
@@ -164,17 +177,19 @@ class GainDetailInfoThread(threading.Thread):
             meeting.specialties = specialities
             meeting.organizer = organizer
             # 根据组织单位的url查找该组织在表中的id
-            meeting.organizer_url = organizer_url
+            if organizer:
+                meeting.organizer_url = organizer_url
+            else:
+                meeting.organizer_url = "null"
             # 保存会议信息,返回会议在会议表中id
             meeting_id = self.save_meeting(meeting)
+            print meeting_id
             # 没有查询到id的话,直接结束
             if not meeting_id:
-                return
+                continue
             # 查找发言人信息
-            print meeting_id
             # 查找viewall, 有的话直接发起viewall链接,没有的话查询本页发言人,没有的话直接
             viewall = html_selector.xpath('//a[@data-type="speaker"]')
-            print viewall
             # 有viewall的话,直接访问viewall
             if viewall:
                 print "viewall"
@@ -186,7 +201,7 @@ class GainDetailInfoThread(threading.Thread):
                 # 没有viewall, 直接查询人物信息
                 speakers_url_list = html_selector.xpath('//div[@id="speaker_confView"]/div/div/div/a/@href')
             if not speakers_url_list:
-                return
+                continue
             for speaker_url in speakers_url_list:
                 self.save_relationship(speaker_url, meeting_id)
 
@@ -194,6 +209,7 @@ class GainDetailInfoThread(threading.Thread):
     def gain_viewall(self, orgSpeakersData, conftype, conftypeid):
         "请求发言人信息的viewall"
         url = "https://www.emedevents.com/view-all"
+        print "gain_viewall"
         # post请求数据
         post_data = {
             "orgSpeakersData": orgSpeakersData,
@@ -213,7 +229,7 @@ class GainDetailInfoThread(threading.Thread):
                 logger.error("查询viewall失败")
                 selector = None
         # 请求失败的话,直接返回
-        if selector is not None:
+        if selector is None:
             return
         speakers_url_list = selector.xpath('//h3/../@href')
         print speakers_url_list
@@ -225,12 +241,13 @@ class GainDetailInfoThread(threading.Thread):
         :param meeting:
         :return: 该会议在数据库中的id
         """
+        print "save_meetings"
         try:
             sql = """select id from organizers where url = '%s'""" % meeting.organizer_url
             self.cursor.execute(sql)
             organizer_id = self.cursor.fetchone()
             if not organizer_id:
-                organizer_id = 'null'
+                organizer_id = "null"
                 insert_sql = """insert into conferences(title, url, start_date, end_date, area, specialties, organizer, organizer_id) VALUES
                                           ("%s", "%s", "%s", "%s", "%s", "%s", "%s", %s)""" % (
                     meeting.title, meeting.url, meeting.start_date, meeting.end_date, meeting.area, meeting.specialties,meeting.organizer,
@@ -238,12 +255,12 @@ class GainDetailInfoThread(threading.Thread):
             else:
                 organizer_id = organizer_id[0]
                 insert_sql = """insert into conferences(title, url, start_date, end_date, area, specialties, organizer, organizer_id) VALUES
-                          ("%s", "%s", "%s", "%s", "%s", "%s", %d)""" % (
+                          ("%s", "%s", "%s", "%s", "%s", "%s", "%s", %s)""" % (
                 meeting.title, meeting.url, meeting.start_date, meeting.end_date, meeting.area, meeting.specialties, meeting.organizer,
                 organizer_id)
             self.cursor.execute(insert_sql)
-
             self.mysql_cli.commit()
+
         except Exception as e:
             self.mysql_cli.rollback()
             logger.error(e)
@@ -251,7 +268,9 @@ class GainDetailInfoThread(threading.Thread):
         try:
             sql = """select id from conferences where url = '%s'""" % meeting.url
             self.cursor.execute(sql)
-            conference_table_id = self.cursor.fetchone()[0]
+            conference_table_id = self.cursor.fetchone()
+            print conference_table_id
+            conference_table_id = conference_table_id[0]
         except Exception as e:
             logger.error(e)
             logger.error("查询会议失败")
@@ -263,6 +282,7 @@ class GainDetailInfoThread(threading.Thread):
     def save_relationship(self, speaker_url, meetingid):
         """保存人物和会议的多对多关系"""
         # 查询人物的id
+        print "save_relationship"
         sql = """select id from speakers where url = '%s'""" % speaker_url
         try:
             self.cursor.execute(sql)
@@ -304,4 +324,6 @@ def main():
 
 
 if __name__ == '__main__':
+    # meeting = GainDetailInfoThread()
+    # meeting.run()
     main()

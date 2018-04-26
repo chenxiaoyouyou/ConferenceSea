@@ -7,6 +7,10 @@ from config import logger
 import random
 import pymysql
 import re
+import redis
+# 可以用来hash请求信息,用于请求去重
+# import json
+# import hashlib
 
 class Organizer:
     name = ''
@@ -17,9 +21,10 @@ class Organizer:
 
 
 
-class OrganizerSpider:
+class OrganizerSpider(threading.Thread):
 
     def __init__(self, start_page=1, thread_name=None):
+        threading.Thread.__init__(self)
         # 起始的url,可以爬取到所有的组织机构信息
         self.start_url = "https://www.emedevents.com/view-all?data[headerSearchForm][search_type]=organizer"
         # 第一次请求用这个user-agent,之后的请求随机选择代理
@@ -36,6 +41,11 @@ class OrganizerSpider:
         # self.flag = True
         self.mysql_cli = pymysql.connect(host="localhost", port=3306, database="conference", user="root", password="mysql", charset="utf8")
         self.cursor = self.mysql_cli.cursor()
+        # 使用redis的set进行去重,多线程抓取,对于已经抓取的具体信息不在进行请求
+        # 加入成功的话返回值为1,反之为0, 也可以将翻页操作加入,这里因为网络失败比较严重
+        # 对翻页操作不做去重
+        self.redis_cli = redis.Redis(host='localhost', port=6379, db=7)
+
 
     def run(self):
         if self.thread_name:
@@ -54,7 +64,6 @@ class OrganizerSpider:
             return
         # 获取第一页中的组织链接
         url_list = self.parse_data(response)
-        print "拿到首页数据"
         for url in url_list:
             # 遍历,拿到每一个机构的url, 没拿到的话,直接抓取下一个
             response = self.get_detail(url)
@@ -114,6 +123,7 @@ class OrganizerSpider:
             "view_all": 0
         }
 
+
         while times <4:
             times += 1
             headers = self.headers
@@ -136,9 +146,17 @@ class OrganizerSpider:
 
     def get_detail(self, url):
         # 请求会议的详情页
+        """将url加入已抓取队列, 加入成功的话,说明还未发起请求,发起请求
+            如果没有加入成功,则不在抓取,为了防止发起请求但是请求失败的情况,在捕捉错误的语句中
+            将,将加入的url删除,以便下次可以继续抓取
+        """
         times = 1
         while times <4:
             times += 1
+            flag = self.redis_cli.sadd("requested_organizers", url)
+            if not flag:
+                # 返回值为0 , 说明已经抓取过
+                return
             headers = self.headers
             headers['User-Agent'] = random.choice(User_Agent)
             try:
@@ -147,7 +165,9 @@ class OrganizerSpider:
             except Exception as e:
                 logger.error(e)
                 logger.error(self.thread_name + "读取页%d失败" %self.page)
-                return
+                self.redis_cli.srem("requested_organizers", url)
+                response = None
+
         return response
 
 
@@ -157,6 +177,7 @@ class OrganizerSpider:
         organizer = Organizer()
         selector = etree.HTML(response.content)
         name = selector.xpath('//title/text()')[0].strip()
+        name = name.replace("'", "\'")
         organizer_id = re.match(r'.*?-(\d+)$', url).group(1)
         address1 = selector.xpath('//div[@class="contact-address"]/div[1]/text()')[0].strip()
         address2 = selector.xpath("//h1/following-sibling::div[1]/text()")[0].strip()
@@ -166,7 +187,9 @@ class OrganizerSpider:
         for s in summary_list:
             s=s.strip()
             summary += s + '\n'
-        organizer.summary = summary
+        # 去除最后的换行符
+        organizer.summary = summary.replace('"', '\\\"').replace("'", "\\\'").strip()
+        # print organizer.summary
         organizer.url = url
         organizer.organizer_id = organizer_id
         organizer.address = address
@@ -249,7 +272,7 @@ class OrganizerSpider:
         try:
             organizer_sql = """select id from organizers where organizer_id = %s""" % or_id
             self.cursor.execute(organizer_sql)
-            or_table_id = self.cursor.fetchone()[0]
+            or_table_id = self.cursor.fetchone()
             print "找到组织"
         except Exception as e:
             logger.error(e)
@@ -257,23 +280,24 @@ class OrganizerSpider:
             return
         if not or_table_id:
             return
+        or_table_id = or_table_id[0]
         for url in url_list:
             print url
             try:
                 speaker_sql = """select id from speakers WHERE url = '%s'""" % url
                 self.cursor.execute(speaker_sql)
-                speaker_table_id = self.cursor.fetchone()[0]
-                print speaker_table_id
-                print "找到发言人"
+                speaker_table_id = self.cursor.fetchone()
+                # print speaker_table_id
             except Exception as e:
                 logger.error(e)
                 print "查询发言人出错"
                 continue
             if not speaker_table_id:
                 continue
+            speaker_table_id = speaker_table_id[0]
+            print "找到发言人"
             # 保存关系
             sql = "insert into organizers_speakers (organizers_id, speakers_id) VALUES (%d, %d)" %(or_table_id, speaker_table_id)
-            print sql
             try:
                 self.cursor.execute(sql)
                 self.mysql_cli.commit()
@@ -285,9 +309,8 @@ class OrganizerSpider:
                 print "保存关系失败"
 
     def save_data(self, organizer):
-        sql = """insert into organizers (url, name, organizer_id, address, summary) VALUES ('%s', '%s', %s, '%s', '%s')""" %(
-            organizer.url, organizer.name, organizer.organizer_id, organizer.address, organizer.summary
-        )
+        sql = """insert into organizers (url, name, organizer_id, address, summary) VALUES ('%s', '%s', %s, '%s', '%s')""" %(organizer.url, organizer.name, organizer.organizer_id, organizer.address, organizer.summary)
+        print sql
         try:
             self.cursor.execute(sql)
             self.mysql_cli.commit()
@@ -296,6 +319,7 @@ class OrganizerSpider:
             self.mysql_cli.rollback()
             logger.error(e)
             logger.error("保存组织失败")
+            print "baocun shibai "
 
 
     def __del__(self):
@@ -303,6 +327,20 @@ class OrganizerSpider:
         self.mysql_cli.close()
 
 
+def main():
+    name_list = ["thread_1", "thread_2", "thread_3"]
+    thread_list = []
+    for name in name_list:
+        spider = OrganizerSpider(335, name)
+        thread_list.append(spider)
+
+    for thread in thread_list:
+        thread.setDaemon(True)
+        thread.start()
+
+    for thread in thread_list:
+        thread.join()
+
+
 if __name__ == "__main__":
-    orgaspider = OrganizerSpider()
-    orgaspider.run()
+    main()

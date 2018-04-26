@@ -2,7 +2,6 @@
 import requests
 from lxml import etree
 import threading
-import urllib
 import redis
 from config import logger
 import time
